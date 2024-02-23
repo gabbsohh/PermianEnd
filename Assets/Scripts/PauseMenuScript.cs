@@ -8,8 +8,6 @@ public class PauseMenuScript : MonoBehaviour
     public static bool paused = false;
     public GameObject pauseMenuCanvas;
 
-    // attempting to commit on different computer
-
     // Start is called before the first frame update
     void Start()
     {
