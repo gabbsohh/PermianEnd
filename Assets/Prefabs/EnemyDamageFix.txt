@@ -1,0 +1,6 @@
+Hi, this is for anyone attempting to place more enemies into the level.
+When placing the enemy prefab into the level, please replace the "Player Health" value inside the Enemy Combat Script component.
+You can do this by dragging the player that's already placed in the level (NOT THE ONE IN THE PREFABS FOLDER) onto the value and it should be fixed.
+This is required for your newly placed enemy to actually damage the player. If you need any assistance, contact me on Discord and i'll help you.
+If you know how to fix this, contact me anyways so I can implement said fix. thx
+

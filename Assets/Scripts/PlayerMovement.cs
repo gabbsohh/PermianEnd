@@ -63,4 +63,10 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+
+    public void StopMovement()
+    {
+        speed = 0f;
+        jump = 0f;
+    }
 }
