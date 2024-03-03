@@ -20,12 +20,12 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (IsGrounded() && !Input.GetButton("Jump"))
+        if (IsGrounded() && !Input.GetKey(KeyCode.Space))
         {
             doubleJump = false;
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (IsGrounded() || doubleJump)
             {
@@ -33,9 +33,11 @@ public class PlayerMovement : MonoBehaviour
 
                 doubleJump = !doubleJump;
             }
+
+            Debug.Log("Jumping!");
         }
 
-        if(Input.GetButtonUp("Jump") && rb.velocity.y > 0)
+        if(Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
