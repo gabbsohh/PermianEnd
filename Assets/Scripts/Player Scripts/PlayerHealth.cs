@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,6 +13,9 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Image healthBarForeground; 
 
     public PlayerMovement playerMovement;
+    public UIManager uiManager;
+
+    private bool isDead;
 
     // Start is called before the first frame update
     private void Start()
@@ -35,9 +39,11 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         healthBarForeground.fillAmount = currentHealth / (float) maxHealth;
         Debug.Log("Player took damage.");
-        if(currentHealth <= 0)
+        if(currentHealth <= 0 && !isDead)
         {
+            isDead = true;
             StartCoroutine(Die());
+            uiManager.GameOver();
         }
     }
 
@@ -47,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
         // Death Animation for Player goes here.
         // All movement stops, and the player is destroyed afterwards.
         gameObject.GetComponent<PlayerMovement>().StopMovement();
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
 
