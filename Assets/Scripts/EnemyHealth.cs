@@ -15,7 +15,7 @@ public class EnemyHealth : MonoBehaviour
     }
 
     public void TakeDamage(int damage)
-    {
+    {       
         if(gameObject.GetComponent<Collider2D>().isActiveAndEnabled == true)
         {
             currentHealth -= damage;
