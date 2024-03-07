@@ -35,7 +35,7 @@ public class EnemyHealth : MonoBehaviour
         gameObject.GetComponent<Collider2D>().enabled = false;
         Debug.Log("Enemy Killed!");
         // Death Animation for Enemy goes here.
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
         // Enemy gets destroyed once health is depleted.
         gameObject.SetActive(false);
     }
