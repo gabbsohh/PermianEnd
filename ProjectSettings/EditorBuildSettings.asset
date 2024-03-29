@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/MechanicsTest.unity
+    path: Assets/Scenes/Level01_Forest.unity
     guid: 8aa0c8372f448c54ab0f58b1747887cd
   - enabled: 1
     path: Assets/Scenes/Level02_Cave.unity
