@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6786358555576473864}
   m_Layer: 0
   m_Name: CollectableWeapon
-  m_TagString: Untagged
+  m_TagString: Pickaxe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
