@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
@@ -52,8 +53,9 @@ public class PlayerHealth : MonoBehaviour
             currentLives--;
             isDead = true;
             StartCoroutine(Die());
-            uiManager.GameOver();
-            UpdateLivesUI();
+            //uiManager.GameOver();
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+            //UpdateLivesUI();
             PlayerPrefs.SetInt("CurrentLives", currentLives);
             
         }
@@ -74,6 +76,8 @@ public class PlayerHealth : MonoBehaviour
         }
         else 
         {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+            PlayerPrefs.DeleteKey("CurrentLives");
             Destroy(gameObject);
         }
     }
@@ -101,4 +105,8 @@ public class PlayerHealth : MonoBehaviour
         Heal(healAmount);
     }
 
+    private void OnDestroy()
+    {
+        PlayerPrefs.SetInt("CurrentLives", currentLives);
+    }
 }
