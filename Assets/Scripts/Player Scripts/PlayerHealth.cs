@@ -10,14 +10,12 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] int maxHealth = 3;
     [SerializeField] int currentHealth;
-    [SerializeField] int maxLives = 3;
-    [SerializeField] int currentLives;
 
     [SerializeField] private Image healthBarForeground;
-    [SerializeField] private TMP_Text livesText;
 
     public PlayerMovement playerMovement;
     public UIManager uiManager;
+    public LifeCounterScript lifeCounter;
 
     private bool isDead;
 
@@ -30,15 +28,13 @@ public class PlayerHealth : MonoBehaviour
     void Awake()
     {
         currentHealth = maxHealth;
-        currentLives = PlayerPrefs.GetInt("CurrentLives", maxLives);
         UpdateHealthBar();
-        UpdateLivesUI();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        lifeCounter.UpdateLivesUI();
     }
 
     public void GetHurt(int damage)
@@ -48,15 +44,15 @@ public class PlayerHealth : MonoBehaviour
 
         Debug.Log("Player took damage.");
 
-        if(currentHealth <= 0 && currentLives > 0 && !isDead)
+        if(currentHealth <= 0 && lifeCounter.currentLives > 0 && !isDead)
         {
-            currentLives--;
+            lifeCounter.currentLives--;
             isDead = true;
             StartCoroutine(Die());
             //uiManager.GameOver();
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
             //UpdateLivesUI();
-            PlayerPrefs.SetInt("CurrentLives", currentLives);
+            PlayerPrefs.SetInt("CurrentLives", lifeCounter.currentLives);
             
         }
     }
@@ -68,7 +64,7 @@ public class PlayerHealth : MonoBehaviour
         // All movement stops, and the player is destroyed afterwards.
         gameObject.GetComponent<PlayerMovement>().StopMovement();
         yield return new WaitForSeconds(1);
-        if (currentLives > 0)
+        if (lifeCounter.currentLives > 0)
         {
             currentHealth = maxHealth;
             isDead = false;
@@ -94,19 +90,10 @@ public class PlayerHealth : MonoBehaviour
         healthBarForeground.fillAmount = currentHealth / (float) maxHealth;
     }
 
-    void UpdateLivesUI()
-    {
-        livesText.text = "LIVES: " + currentLives;
-    }
-
     public void CollectHealthCollectable(int healAmount)
     {
         Debug.Log("Health increased by 1");
         Heal(healAmount);
     }
 
-    private void OnDestroy()
-    {
-        PlayerPrefs.SetInt("CurrentLives", currentLives);
-    }
 }
