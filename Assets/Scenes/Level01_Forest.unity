@@ -1247,21 +1247,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1631551741}
     m_Modifications:
     - target: {fileID: -6176338031792430130, guid: a77405d62abca8d42ba495ab10c28fa8, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6176338031792430130, guid: a77405d62abca8d42ba495ab10c28fa8, type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 94825449727149366}
-    - target: {fileID: 7818627054355085837, guid: a77405d62abca8d42ba495ab10c28fa8, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7818627054355085839, guid: a77405d62abca8d42ba495ab10c28fa8, type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
+    - target: {fileID: 6050628590035519183, guid: a77405d62abca8d42ba495ab10c28fa8, type: 3}
+      propertyPath: pointA
+      value: 
+      objectReference: {fileID: 470939157}
+    - target: {fileID: 6050628590035519183, guid: a77405d62abca8d42ba495ab10c28fa8, type: 3}
+      propertyPath: pointB
+      value: 
+      objectReference: {fileID: 957958931}
     - target: {fileID: 7818627054355085839, guid: a77405d62abca8d42ba495ab10c28fa8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.37
@@ -1309,10 +1305,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7818627054355085875, guid: a77405d62abca8d42ba495ab10c28fa8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1172787448}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a77405d62abca8d42ba495ab10c28fa8, type: 3}
 --- !u!1 &313406619
 GameObject:
@@ -1593,6 +1586,37 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!1 &433165830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 3262099459204732447, guid: 91537953da733dd4492113431a08d246, type: 3}
+  m_PrefabInstance: {fileID: 1254660047}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 433165831}
+  m_Layer: 0
+  m_Name: Dino_Enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &433165831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 513434184850762944, guid: 91537953da733dd4492113431a08d246, type: 3}
+  m_PrefabInstance: {fileID: 1254660047}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433165830}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &449120200 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 94825448895059918, guid: fafbb99493e39344e87463e4a3699d09, type: 3}
@@ -4366,31 +4390,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1172787446 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7818627054355085875, guid: a77405d62abca8d42ba495ab10c28fa8, type: 3}
-  m_PrefabInstance: {fileID: 296744474}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1172787447 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7818627054355085839, guid: a77405d62abca8d42ba495ab10c28fa8, type: 3}
   m_PrefabInstance: {fileID: 296744474}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1172787448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172787446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8fa86d018d402e4badda34346e71494, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointA: {fileID: 470939157}
-  pointB: {fileID: 957958931}
-  speed: 2
 --- !u!1 &1201550641
 GameObject:
   m_ObjectHideFlags: 0
