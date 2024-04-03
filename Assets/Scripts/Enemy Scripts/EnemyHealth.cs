@@ -5,6 +5,9 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] public int maxHealth;
+
+    public EnemyPatrol enemyPatrol;
+
     int currentHealth;
 
     // Start is called before the first frame update
@@ -35,6 +38,7 @@ public class EnemyHealth : MonoBehaviour
         gameObject.GetComponent<Collider2D>().enabled = false;
         Debug.Log("Enemy Killed!");
         // Death Animation for Enemy goes here.
+        enemyPatrol.speed = 0;
         yield return new WaitForSeconds(1);
         // Enemy gets destroyed once health is depleted.
         gameObject.SetActive(false);

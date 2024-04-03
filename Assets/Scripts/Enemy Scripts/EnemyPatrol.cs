@@ -8,6 +8,8 @@ public class EnemyPatrol : MonoBehaviour
     public GameObject pointA;
     public GameObject pointB;
     public float speed;
+    public float tempSpeed = 0;
+    public bool isStunned = false;
     private Rigidbody2D rb;
     private Transform currentPoint;
 
@@ -16,6 +18,7 @@ public class EnemyPatrol : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currentPoint = pointB.transform;
+        GetComponent<BoxCollider2D>().isTrigger = false;
     }
 
     // Update is called once per frame
@@ -40,6 +43,17 @@ public class EnemyPatrol : MonoBehaviour
         {
             currentPoint = pointB.transform;
         }
+
+        // Variables for checking if enemy is stunned.
+        // Not used in actual stunning function, but for animations.
+        if(speed == 0)
+        {
+            isStunned = true;
+        }
+        else
+        {
+            isStunned = false;
+        }
     }
 
     private void OnDrawGizmos()
@@ -47,5 +61,21 @@ public class EnemyPatrol : MonoBehaviour
         Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
         Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
         Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
+    }
+
+    public void GetStunned()
+    {
+        tempSpeed = speed;
+        StartCoroutine(Stunned(3));
+    }
+
+    IEnumerator Stunned(int seconds)
+    {   
+        speed = 0;
+        GetComponent<BoxCollider2D>().isTrigger = true;
+        yield return new WaitForSeconds(seconds);
+        speed = tempSpeed;
+        yield return new WaitForSeconds(1);
+        GetComponent<BoxCollider2D>().isTrigger = false;
     }
 }

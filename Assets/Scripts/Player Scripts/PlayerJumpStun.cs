@@ -21,23 +21,23 @@ public class PlayerJumpStun : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        // Check if enemy is being jumped on.
+
         if(other.CompareTag("Enemy"))
         {
-            // Stun the enemy once they're jumped on.
-            other.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
-            Debug.Log("Enemy Stunned!");
-            StartCoroutine(StunEnemy());
-            other.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-            other.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-            Debug.Log("Enemy is no longer Stunned!");
+            // Check if enemy's box collider is a trigger to prevent repeat stunning.
+            // This is so the tempSpeed variable of EnemyPatrol doesn't drop to 0,
+            // permanently lowering the enemy's speed.
 
-            // Make the player bounce off of the enemy.
-            rb2d.velocity = new Vector2(rb2d.velocity.x, bounce);
+            if(other.GetComponent<BoxCollider2D>().isTrigger == false)
+            {
+                // Stun the enemy once they're jumped on.
+                Debug.Log("Enemy Stunned!");
+                // Call the stun function of EnemyPatrol.
+                other.gameObject.GetComponent<EnemyPatrol>().GetStunned();
+                // Make the player bounce off of the enemy.
+                rb2d.velocity = new Vector2(rb2d.velocity.x, bounce);
+            }
         }
-    }
-
-    IEnumerator StunEnemy()
-    {
-        yield return new WaitForSeconds(8f);
     }
 }

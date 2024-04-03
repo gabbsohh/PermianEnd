@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] int maxHealth = 3;
     [SerializeField] int currentHealth;
+    [SerializeField] private Rigidbody2D rb;
 
     [SerializeField] private Image healthBarForeground; 
 
@@ -37,13 +38,13 @@ public class PlayerHealth : MonoBehaviour
     public void GetHurt(int damage)
     {
         currentHealth -= damage;
-        healthBarForeground.fillAmount = currentHealth / (float) maxHealth;
+        //healthBarForeground.fillAmount = currentHealth / (float) maxHealth;
         Debug.Log("Player took damage.");
         if(currentHealth <= 0 && !isDead)
         {
             isDead = true;
             StartCoroutine(Die());
-            uiManager.GameOver();
+            //uiManager.GameOver();
         }
     }
 
@@ -51,9 +52,18 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Player has died.");
         // Death Animation for Player goes here.
-        // All movement stops, and the player is destroyed afterwards.
+
+        // All movement stops, all collision is removed and the player is destroyed afterwards.
         gameObject.GetComponent<PlayerMovement>().StopMovement();
-        yield return new WaitForSeconds(1);
+
+        // Rigidbody stays in place to prevent player from falling off the map mario-style.
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+
+        // Box Collider turns into a trigger to prevent collision with enemies during death.
+        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+
+        // Change the number here to the duration of the death animation so the whole thing plays out.
+        yield return new WaitForSeconds(3);
         Destroy(gameObject);
     }
 
@@ -62,7 +72,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth += healAmount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        healthBarForeground.fillAmount = currentHealth / (float) maxHealth;
+        //healthBarForeground.fillAmount = currentHealth / (float) maxHealth;
     }
 
 }
