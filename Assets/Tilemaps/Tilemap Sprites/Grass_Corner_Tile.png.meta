@@ -1,0 +1,528 @@
+fileFormatVersion: 2
+guid: 8eac1201342e57548a5151e003d61037
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 168
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 840
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497b1a2ba112e4a4f980d11a6bd1b620
+      internalID: 185918195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 840
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c9b3204fe29464bae9ae0bbf215429
+      internalID: -1420833012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_2
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 840
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22a07e416747b914694afcfe2864ae6f
+      internalID: 1512244672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_3
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 840
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8311ebc621a3374182d9d264f24fcd5
+      internalID: 437353390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_4
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 840
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a7aeb5d5430b8040add053b228929f0
+      internalID: -871958458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_5
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 840
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abba91dd6230c174d9a649e1441ffe98
+      internalID: -1923545663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5314e86dad9c564cb7bbc4e70ed1f2c
+      internalID: 884403349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 672
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cdc2595f4a607640b042fa507795cf6
+      internalID: -489160322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_8
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 672
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e557c79e47e954d91c8718cdfc185b
+      internalID: -1161993483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_9
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 672
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73f6f62dcb9096478ca6de749fddecb
+      internalID: -2080807171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_10
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 672
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777c5adee09a2e644b97ba99325150be
+      internalID: -1267747374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_11
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 672
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366f05f40910dc1408a70751027c8db2
+      internalID: 2010646159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 504
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba24187d47b73f4c886dce416867bfa
+      internalID: 1344152493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_13
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 504
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb559bf2ad8033d40884233196aa7862
+      internalID: -1023506044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_14
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 504
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903ef424b46d0274faef084a228dd6e5
+      internalID: -445174825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_15
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 504
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b028798c3313e408243c8691a19bef
+      internalID: -1877254990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_16
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 504
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10c7e066837b1646abfc5c2a391a0d6
+      internalID: -331143445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Corner_Tile_17
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 504
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120ef631642ed4f47a2a8bf91891e2f4
+      internalID: 1072150057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Grass_Corner_Tile_0: 185918195
+      Grass_Corner_Tile_1: -1420833012
+      Grass_Corner_Tile_10: -1267747374
+      Grass_Corner_Tile_11: 2010646159
+      Grass_Corner_Tile_12: 1344152493
+      Grass_Corner_Tile_13: -1023506044
+      Grass_Corner_Tile_14: -445174825
+      Grass_Corner_Tile_15: -1877254990
+      Grass_Corner_Tile_16: -331143445
+      Grass_Corner_Tile_17: 1072150057
+      Grass_Corner_Tile_18: -19506687
+      Grass_Corner_Tile_19: 1394262602
+      Grass_Corner_Tile_2: 1512244672
+      Grass_Corner_Tile_20: 283261586
+      Grass_Corner_Tile_21: -840160859
+      Grass_Corner_Tile_22: 1787080458
+      Grass_Corner_Tile_23: -1994377283
+      Grass_Corner_Tile_24: 907963675
+      Grass_Corner_Tile_25: -1142619320
+      Grass_Corner_Tile_26: -846820004
+      Grass_Corner_Tile_27: 172448609
+      Grass_Corner_Tile_28: 1917762098
+      Grass_Corner_Tile_29: 1628379075
+      Grass_Corner_Tile_3: 437353390
+      Grass_Corner_Tile_30: -4609941
+      Grass_Corner_Tile_31: 252746399
+      Grass_Corner_Tile_32: -2128320220
+      Grass_Corner_Tile_33: -1041467373
+      Grass_Corner_Tile_34: -766272096
+      Grass_Corner_Tile_35: -1938564235
+      Grass_Corner_Tile_4: -871958458
+      Grass_Corner_Tile_5: -1923545663
+      Grass_Corner_Tile_6: 884403349
+      Grass_Corner_Tile_7: -489160322
+      Grass_Corner_Tile_8: -1161993483
+      Grass_Corner_Tile_9: -2080807171
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
