@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: 4aac4292209f7fc41bfac70aebe6f52c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: MC_Jump_Knife_SpriteSheet_0
+  - first:
+      213: 21300002
+    second: MC_Jump_Knife_SpriteSheet_1
+  - first:
+      213: 21300004
+    second: MC_Jump_Knife_SpriteSheet_2
+  - first:
+      213: 21300006
+    second: MC_Jump_Knife_SpriteSheet_3
+  - first:
+      213: 21300008
+    second: MC_Jump_Knife_SpriteSheet_4
+  - first:
+      213: 21300010
+    second: MC_Jump_Knife_SpriteSheet_5
+  - first:
+      213: 21300012
+    second: MC_Jump_Knife_SpriteSheet_6
+  - first:
+      213: 21300014
+    second: MC_Jump_Knife_SpriteSheet_7
+  - first:
+      213: 21300016
+    second: MC_Jump_Knife_SpriteSheet_8
+  - first:
+      213: 21300018
+    second: MC_Jump_Knife_SpriteSheet_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MC_Jump_Knife_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 13
+        width: 405
+        height: 493
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2a4799ed9d75e4ea80817600b66552
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_Jump_Knife_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 19
+        width: 381
+        height: 472
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebcaa17c2d72cd4083693515b990a69
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_Jump_Knife_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 23
+        width: 383
+        height: 455
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d675b3ef9b2c3459725ac807a890f8
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_Jump_Knife_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 10
+        width: 393
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154534bd1712a9e44bc80aa5277f6e37
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_Jump_Knife_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 7
+        width: 399
+        height: 550
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e19f3499c0f55c34692a64f89964d4c0
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_Jump_Knife_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 29
+        width: 374
+        height: 507
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed676d39d0f50d49a6a2091eae3e373
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_Jump_Knife_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 2619
+        y: 40
+        width: 374
+        height: 496
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e277df19e09f9542a41a421fd1cb09e
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_Jump_Knife_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 23
+        width: 396
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e037b94029e8d248b6d40a530bf751e
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_Jump_Knife_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 3480
+        y: 13
+        width: 405
+        height: 493
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c01cb72e3a4fc49bf4f613233c14b4
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_Jump_Knife_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 3932
+        y: 13
+        width: 402
+        height: 493
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ddb6898a742f04c8c4a68820b4d6eb
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fe25b32e2868862468f867fe18413034
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      MC_Jump_Knife_SpriteSheet_0: 21300000
+      MC_Jump_Knife_SpriteSheet_1: 21300002
+      MC_Jump_Knife_SpriteSheet_2: 21300004
+      MC_Jump_Knife_SpriteSheet_3: 21300006
+      MC_Jump_Knife_SpriteSheet_4: 21300008
+      MC_Jump_Knife_SpriteSheet_5: 21300010
+      MC_Jump_Knife_SpriteSheet_6: 21300012
+      MC_Jump_Knife_SpriteSheet_7: 21300014
+      MC_Jump_Knife_SpriteSheet_8: 21300016
+      MC_Jump_Knife_SpriteSheet_9: 21300018
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
