@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6082938999829693205}
   - component: {fileID: 2678552500181910014}
-  - component: {fileID: 3385748310156318279}
   - component: {fileID: 710839692881478683}
+  - component: {fileID: 7074414226791858764}
   m_Layer: 0
   m_Name: HealthCollectable
   m_TagString: Untagged
@@ -86,19 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3385748310156318279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3870391537110737862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19bb1132645c6844a1bfc39d4a7419c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healAmount: 1
 --- !u!58 &710839692881478683
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -134,3 +121,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &7074414226791858764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3870391537110737862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19bb1132645c6844a1bfc39d4a7419c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healAmount: 1

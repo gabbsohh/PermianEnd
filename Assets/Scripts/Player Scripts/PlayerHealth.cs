@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -85,13 +86,6 @@ public class PlayerHealth : MonoBehaviour
     void UpdateHealthBar()
     {
         healthBarForeground.fillAmount = Mathf.Clamp(currentHealth / (float)maxHealth, 0, 1);
-    }
-
-    public void Heal(int healAmount)
-    {
-        currentHealth += healAmount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        UpdateHealthBar();
     }
 
     public void CollectHealthCollectable(int healAmount)

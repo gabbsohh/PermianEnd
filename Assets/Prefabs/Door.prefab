@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4355813485022856591}
   - component: {fileID: 8008395125175554427}
   - component: {fileID: 791613939078677699}
-  - component: {fileID: 369240319964910348}
   - component: {fileID: 3878286725210440991}
+  - component: {fileID: 1930869632802957072}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -132,20 +132,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5646892, y: 1.1462356}
   m_EdgeRadius: 0
---- !u!114 &369240319964910348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302935299245098502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c8560a187bbcf2489dbc061976a4a7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  locked: 0
-  player: {fileID: 0}
 --- !u!50 &3878286725210440991
 Rigidbody2D:
   serializedVersion: 4
@@ -173,3 +159,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1930869632802957072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302935299245098502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8560a187bbcf2489dbc061976a4a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locked: 0
+  player: {fileID: 94825448895059918, guid: fafbb99493e39344e87463e4a3699d09, type: 3}
