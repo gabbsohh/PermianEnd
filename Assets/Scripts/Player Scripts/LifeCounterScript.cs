@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using static Cinemachine.DocumentationSortingAttribute;
+
 
 public class LifeCounterScript : MonoBehaviour
 {
@@ -9,25 +13,39 @@ public class LifeCounterScript : MonoBehaviour
     [SerializeField] public int currentLives;
     [SerializeField] private TMP_Text livesText;
 
+    private PlayerHealth playerHealth;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        currentLives = PlayerPrefs.GetInt("CurrentLives", maxLives);
+        currentLives = maxLives;
+
+        playerHealth = FindObjectOfType<PlayerHealth>();
+
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentLives = PlayerPrefs.GetInt("CurrentLives", maxLives);
+        UpdateLivesUI();
+    }
+
+    public void UpdateLives()
+    {
+        if (currentLives > 0)
+        {
+            currentLives--;
+
+            if (currentLives == 0)
+            {
+                playerHealth.isDead = true;
+            }
+        }
     }
 
     public void UpdateLivesUI()
     {
         livesText.text = "LIVES: " + currentLives;
-    }
-
-    private void OnDestroy()
-    {
-        PlayerPrefs.SetInt("CurrentLives", currentLives);
     }
 }
