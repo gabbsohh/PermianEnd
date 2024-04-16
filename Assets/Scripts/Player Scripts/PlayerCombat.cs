@@ -13,6 +13,7 @@ public class PlayerCombat : MonoBehaviour
     public Transform attackPoint;
     public float attackArea = 0.75f;
     public LayerMask enemyLayers;
+    public LayerMask obstacleLayers;
 
     public int attackDamage = 1;
 
@@ -91,8 +92,29 @@ public class PlayerCombat : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackArea, enemyLayers);
         foreach(Collider2D enemy in hitEnemies)
         {
-            Debug.Log(enemy.name + " hit.");
-            enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
+            if(enemy.GetComponent<EnemyHealth>().isArmored == false)
+            {
+                Debug.Log(enemy.name + " hit.");
+                enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
+            }
+            if(enemy.GetComponent<EnemyHealth>().isArmored == true && usingPick == false)
+            {
+                Debug.Log("Enemy armor resisted damage!");
+            }
+            if(enemy.GetComponent<EnemyHealth>().isArmored == true && usingPick == true)
+            {
+                enemy.GetComponent<EnemyHealth>().isArmored = false;
+                Debug.Log("Enemy armor was broken!");
+            }
+        }
+
+        Collider2D[] destroyedObstacles = Physics2D.OverlapCircleAll(attackPoint.position, attackArea, obstacleLayers);
+        foreach(Collider2D obstacle in destroyedObstacles)
+        {
+            if(usingPick == true)
+            {
+                obstacle.GetComponent<BreakableBlockScript>().BreakBlock();
+            }
         }
 
         canAttack = Time.time + attackRate;
