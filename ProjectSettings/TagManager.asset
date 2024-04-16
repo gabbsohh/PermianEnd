@@ -6,8 +6,6 @@ TagManager:
   tags:
   - PlayerAttack
   - Enemy
-  - Pickaxe
-  - ArmoredEnemy
   - Key
   layers:
   - Default
@@ -17,7 +15,7 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - ArmoredEnemy
+  - 
   - 
   - 
   - 
