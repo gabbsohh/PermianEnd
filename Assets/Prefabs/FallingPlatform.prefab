@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 552485742660755079}
   - component: {fileID: 7631099592081328871}
   - component: {fileID: 2220245765202307002}
-  - component: {fileID: 4981477847623126020}
+  - component: {fileID: 4727405143383767246}
   m_Layer: 3
   m_Name: FallingPlatform
   m_TagString: Untagged
@@ -179,7 +179,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4981477847623126020
+--- !u!114 &4727405143383767246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,9 +188,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8641744945811330856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bda311f82184c3d44a1dc8d307dbf712, type: 3}
+  m_Script: {fileID: 11500000, guid: d7ffafb1a65ff9e4dac59c0685e11f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2220245765202307002}
-  fallDelay: 1
+  fallDelay: 2
   respawnTime: 2

@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c36f213fec74b2240b2892a1f09ec688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
-  damage: 0
+  playerHealth: {fileID: 6178519183296953393, guid: fafbb99493e39344e87463e4a3699d09, type: 3}
+  damage: 1
 --- !u!114 &-5575083790713455919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee52368624370c145b677c8f7989d4ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 3
+  enemyPatrol: {fileID: 0}
+  isArmored: 0
 --- !u!114 &8076920460751271724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +155,8 @@ MonoBehaviour:
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   speed: 0
+  tempSpeed: 0
+  isStunned: 0
 --- !u!50 &-4645629849996005271
 Rigidbody2D:
   serializedVersion: 4
