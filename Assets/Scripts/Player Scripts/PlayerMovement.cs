@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public float speed = 8f;
     [SerializeField] public float jump = 6f;
     private bool isFacingRight = true;
+    PlayerHealth pHealth;
 
     private bool doubleJump;
 
@@ -15,34 +16,43 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    private void Start()
+    {
+        pHealth = FindObjectOfType<PlayerHealth>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-
-        if (IsGrounded() && !Input.GetKey(KeyCode.Space))
+        if (!pHealth.isDead)
         {
-            doubleJump = false;
-        }
+            horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (IsGrounded() || doubleJump)
+            if (IsGrounded() && !Input.GetKey(KeyCode.Space))
             {
-                rb.velocity = new Vector2(rb.velocity.x, jump);
-
-                doubleJump = !doubleJump;
+                doubleJump = false;
             }
 
-            Debug.Log("Jumping!");
-        }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                if (IsGrounded() || doubleJump)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, jump);
 
-        if(Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
+                    doubleJump = !doubleJump;
+                }
 
-        Flip();
+                Debug.Log("Jumping!");
+            }
+
+            if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            }
+
+            Flip();
+        }
+    
     }
 
     private void FixedUpdate()

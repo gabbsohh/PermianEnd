@@ -13,28 +13,21 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private Image healthBarForeground; 
 
+    public bool isDead;
+
     public PlayerMovement playerMovement;
     public UIManager uiManager;
     public LifeCounterScript lifeCounter;
 
-    private bool isDead;
-
-    // Start is called before the first frame update
     private void Start()
     {
-        
+        maxHealth = currentHealth;
+        isDead = false;
     }
 
-    void Awake()
+    private void Update()
     {
-        currentHealth = maxHealth;
         UpdateHealthBar();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        lifeCounter.UpdateLivesUI();
     }
 
     public void GetHurt(int damage)
@@ -42,17 +35,10 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         //healthBarForeground.fillAmount = currentHealth / (float) maxHealth;
         Debug.Log("Player took damage.");
-
-        if(currentHealth <= 0 && lifeCounter.currentLives > 0 && !isDead)
+        if (currentHealth <= 0)
         {
-            lifeCounter.currentLives--;
-            isDead = true;
-            StartCoroutine(Die());
-            //uiManager.GameOver();
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
-            //UpdateLivesUI();
-            PlayerPrefs.SetInt("CurrentLives", lifeCounter.currentLives);
-            
+            lifeCounter.UpdateLives();
+            Debug.Log("Player life went down by 1");
         }
     }
 
@@ -98,7 +84,14 @@ public class PlayerHealth : MonoBehaviour
 
     void UpdateHealthBar()
     {
-        healthBarForeground.fillAmount = currentHealth / (float) maxHealth;
+        healthBarForeground.fillAmount = Mathf.Clamp(currentHealth / (float)maxHealth, 0, 1);
+    }
+
+    public void Heal(int healAmount)
+    {
+        currentHealth += healAmount;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        UpdateHealthBar();
     }
 
     public void CollectHealthCollectable(int healAmount)
