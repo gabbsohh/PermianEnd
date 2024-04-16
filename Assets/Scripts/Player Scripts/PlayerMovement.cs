@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
-    private float speed = 8f;
-    private float jump = 6f;
+    [SerializeField] public float speed = 8f;
+    [SerializeField] public float jump = 6f;
     private bool isFacingRight = true;
     PlayerHealth pHealth;
 
