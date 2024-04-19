@@ -259,6 +259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d924f97c00bb8948ac25f5664a8236f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 8
+  jump: 6
   rb: {fileID: 94825448895059916}
   groundCheck: {fileID: 94825448898188249}
   groundLayer:
@@ -278,12 +280,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRate: 0.5
   canAttack: -1
+  canSwitch: -1
   attackPoint: {fileID: 94825448592162598}
   attackArea: 0.75
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
+  obstacleLayers:
+    serializedVersion: 2
+    m_Bits: 0
   attackDamage: 1
+  weapons: []
+  usingPick: 0
 --- !u!114 &6178519183296953393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,8 +305,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
-  currentHealth: 10
+  currentHealth: -8
+  rb: {fileID: 0}
+  healthBarForeground: {fileID: 1576775594340534675, guid: 2df2268cfd50b9049b9bb9af7b7dba64, type: 3}
+  isDead: 0
   playerMovement: {fileID: 94825448895059913}
+  uiManager: {fileID: 0}
+  lifeCounter: {fileID: 0}
 --- !u!1 &94825448898188250
 GameObject:
   m_ObjectHideFlags: 0

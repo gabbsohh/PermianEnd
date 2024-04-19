@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] int maxHealth = 3;
+    [SerializeField] int maxHealth;
     [SerializeField] int currentHealth;
     [SerializeField] private Rigidbody2D rb;
 
@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        maxHealth = currentHealth;
+        currentHealth = maxHealth;
         isDead = false;
     }
 
@@ -34,35 +34,23 @@ public class PlayerHealth : MonoBehaviour
     public void GetHurt(int damage)
     {
         currentHealth -= damage;
-        //healthBarForeground.fillAmount = currentHealth / (float) maxHealth;
+        UpdateHealthBar();
         Debug.Log("Player took damage.");
         if (currentHealth <= 0)
         {
-            lifeCounter.UpdateLives();
+            Die();
             Debug.Log("Player life went down by 1");
+            
         }
     }
 
     public IEnumerator Die()
     {
         Debug.Log("Player has died.");
-        // Death Animation for Player goes here.
+        // death anim
 
         // All movement stops, all collision is removed and the player is destroyed afterwards.
         gameObject.GetComponent<PlayerMovement>().StopMovement();
-        yield return new WaitForSeconds(1);
-        if (lifeCounter.currentLives > 0)
-        {
-            currentHealth = maxHealth;
-            isDead = false;
-            UpdateHealthBar();
-        }
-        else 
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
-            PlayerPrefs.DeleteKey("CurrentLives");
-            Destroy(gameObject);
-        }
 
         // Rigidbody stays in place to prevent player from falling off the map mario-style.
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
@@ -79,13 +67,20 @@ public class PlayerHealth : MonoBehaviour
     { 
         currentHealth += healAmount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-
-        //healthBarForeground.fillAmount = currentHealth / (float) maxHealth;
     }
 
     void UpdateHealthBar()
     {
-        healthBarForeground.fillAmount = Mathf.Clamp(currentHealth / (float)maxHealth, 0, 1);
+        if (healthBarForeground != null)
+        {
+            float fillAmount = Mathf.Clamp(currentHealth / (float)maxHealth, 0, 1);
+            Debug.Log("Health bar fill amount: " + fillAmount);
+            healthBarForeground.fillAmount = fillAmount;
+        }
+        else
+        {
+            Debug.LogError("Health bar foreground image is not assigned!");
+        }
     }
 
     public void CollectHealthCollectable(int healAmount)

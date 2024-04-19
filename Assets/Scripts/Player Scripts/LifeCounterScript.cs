@@ -22,7 +22,6 @@ public class LifeCounterScript : MonoBehaviour
 
         playerHealth = FindObjectOfType<PlayerHealth>();
 
-        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame

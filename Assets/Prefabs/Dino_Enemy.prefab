@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2392322970437380375}
   - component: {fileID: -6286246098522691698}
   - component: {fileID: 7161647060160494705}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dino_Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0085572, y: 2.5757227}
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
-  enemyPatrol: {fileID: 0}
+  enemyPatrol: {fileID: -6286246098522691698}
   isArmored: 0
 --- !u!114 &2392322970437380375
 MonoBehaviour:
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c36f213fec74b2240b2892a1f09ec688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 6178519183296953393, guid: fafbb99493e39344e87463e4a3699d09, type: 3}
+  playerHealth: {fileID: 3496214655755202996, guid: 148954485393d9748a82cd0e1c8368b3, type: 3}
   damage: 1
 --- !u!114 &-6286246098522691698
 MonoBehaviour:
