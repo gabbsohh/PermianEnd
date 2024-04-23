@@ -1540,6 +1540,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locked: 0
   player: {fileID: 449120200}
+--- !u!114 &438960546 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1930869632802957072, guid: c2d7c729560b2d94e956983dd32c7955, type: 3}
+  m_PrefabInstance: {fileID: 7836703352523779935}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438960544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8560a187bbcf2489dbc061976a4a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &449120200 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8835167956795860996, guid: 148954485393d9748a82cd0e1c8368b3, type: 3}
@@ -8160,6 +8171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerV3
       objectReference: {fileID: 0}
+    - target: {fileID: 9159354778180798521, guid: 148954485393d9748a82cd0e1c8368b3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8358,11 +8373,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5859762796200988356, guid: dede93d0c9417404eac555fa16b266cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 52.99
+      value: -4.7
       objectReference: {fileID: 0}
     - target: {fileID: 5859762796200988356, guid: dede93d0c9417404eac555fa16b266cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.01
+      value: -3.4
       objectReference: {fileID: 0}
     - target: {fileID: 5859762796200988356, guid: dede93d0c9417404eac555fa16b266cb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8404,6 +8419,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 449120200}
+    - target: {fileID: 8864618341730254408, guid: dede93d0c9417404eac555fa16b266cb, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 438960546}
     - target: {fileID: 8864618341730254408, guid: dede93d0c9417404eac555fa16b266cb, type: 3}
       propertyPath: player
       value: 
