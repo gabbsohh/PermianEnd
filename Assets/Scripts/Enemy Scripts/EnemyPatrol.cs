@@ -24,24 +24,27 @@ public class EnemyPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 point = currentPoint.position - transform.position;
-        if (currentPoint == pointB.transform)
-        { 
-            rb.velocity = new Vector2(speed, 0);
-        }
-        else
+        if (!isStunned)
         {
-            rb.velocity = new Vector2(-speed, 0);
-        }
+            Vector2 point = currentPoint.position - transform.position;
+            if (currentPoint == pointB.transform)
+            {
+                rb.velocity = new Vector2(speed, 0);
+            }
+            else
+            {
+                rb.velocity = new Vector2(-speed, 0);
+            }
 
-        if (Vector2.Distance(transform.position, currentPoint.position) < 1f && currentPoint == pointB.transform)
-        { 
-            currentPoint = pointA.transform;
-        }
+            if (Vector2.Distance(transform.position, currentPoint.position) < 1f && currentPoint == pointB.transform)
+            {
+                currentPoint = pointA.transform;
+            }
 
-        if (Vector2.Distance(transform.position, currentPoint.position) < 1f && currentPoint == pointA.transform)
-        {
-            currentPoint = pointB.transform;
+            if (Vector2.Distance(transform.position, currentPoint.position) < 1f && currentPoint == pointA.transform)
+            {
+                currentPoint = pointB.transform;
+            }
         }
 
         // Variables for checking if enemy is stunned.
