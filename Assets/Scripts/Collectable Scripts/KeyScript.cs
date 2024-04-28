@@ -6,6 +6,7 @@ public class KeyScript : MonoBehaviour
 {
     [SerializeField] private DoorScript door;
     [SerializeField] GameObject player;
+    [SerializeField] private AudioClip keySoundClip;
 
     private bool isPickedUp;
 
@@ -20,6 +21,7 @@ public class KeyScript : MonoBehaviour
         {
             isPickedUp = true;
             door.UnlockDoor();
+            AudioManager.instance.PlaySoundFXClip(keySoundClip, transform, 0.5f);
             Destroy(gameObject);
         }
     }

@@ -133,4 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 022a59abe5fcbcc44892191183022115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectableSoundClips:
+  - {fileID: 8300000, guid: 2d6fa037989bdfd4caa6a2eafb835988, type: 3}
+  - {fileID: 8300000, guid: 5b788d169d0ccee47b4b7b77683f4b77, type: 3}
   value: 1

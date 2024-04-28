@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     [SerializeField] public float speed = 8f;
     [SerializeField] public float jump = 6f;
+    [SerializeField] private AudioClip jumpSoundClip;
     private bool isFacingRight = true;
     PlayerHealth pHealth;
 
@@ -38,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
                 if (IsGrounded() || doubleJump)
                 {
                     rb.velocity = new Vector2(rb.velocity.x, jump);
-
+                    AudioManager.instance.PlaySoundFXClip(jumpSoundClip, transform, 0.5f);
                     doubleJump = !doubleJump;
                 }
 

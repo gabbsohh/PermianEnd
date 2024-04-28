@@ -12,6 +12,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] int currentHealth;
     [SerializeField] private Rigidbody2D rb;
 
+    [SerializeField] private AudioClip hurtSoundClip;
+
     [SerializeField] private Image healthBarForeground; 
 
     public bool isDead;
@@ -20,10 +22,18 @@ public class PlayerHealth : MonoBehaviour
     public UIManager uiManager;
     public LifeCounterScript lifeCounter;
 
+    [SerializeField] private float iFramesDuration;
+    [SerializeField] private int numFlashes;
+    private SpriteRenderer spriteRend;
+
+    public GameObject StompChecker;
+
     private void Start()
     {
         maxHealth = currentHealth;
         isDead = false;
+        spriteRend = GetComponent<SpriteRenderer>();
+        StompChecker = transform.GetChild(2).gameObject;
     }
 
     private void Update()
@@ -36,10 +46,15 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         //healthBarForeground.fillAmount = currentHealth / (float) maxHealth;
         Debug.Log("Player took damage.");
+        AudioManager.instance.PlaySoundFXClip(hurtSoundClip, transform, 0.5f);
         if (currentHealth <= 0)
         {
             lifeCounter.UpdateLives();
             Debug.Log("Player life went down by 1");
+        }
+        else
+        {
+            StartCoroutine(Invulnerability());
         }
     }
 
@@ -94,4 +109,19 @@ public class PlayerHealth : MonoBehaviour
         Heal(healAmount);
     }
 
+    private IEnumerator Invulnerability()
+    {
+        // Following script causes Player to ignore enemy collision after getting hurt, and disables the jump stun temporarily.
+        Physics2D.IgnoreLayerCollision(9,6,true);
+        StompChecker.GetComponent<BoxCollider2D>().enabled = false;
+        for(int i = 0; i < numFlashes; i++)
+        {
+            spriteRend.color = new Color(1,0,0,0.5f);
+            yield return new WaitForSeconds(1);
+            spriteRend.color = Color.white;
+            yield return new WaitForSeconds(1);
+        }
+        StompChecker.GetComponent<BoxCollider2D>().enabled = true;
+        Physics2D.IgnoreLayerCollision(9,6,false);
+    }
 }

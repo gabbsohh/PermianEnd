@@ -9,6 +9,7 @@ TagManager:
   - Pickaxe
   - ArmoredEnemy
   - Obstacle
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Enemy
   - ArmoredEnemy
   - Obstacle
-  - 
+  - Player
   - 
   - 
   - 
