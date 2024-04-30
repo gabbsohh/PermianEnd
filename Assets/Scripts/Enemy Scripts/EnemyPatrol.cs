@@ -12,6 +12,7 @@ public class EnemyPatrol : MonoBehaviour
     public bool isStunned = false;
     private Rigidbody2D rb;
     private Transform currentPoint;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -36,15 +37,16 @@ public class EnemyPatrol : MonoBehaviour
                 rb.velocity = new Vector2(-speed, 0);
             }
 
-            if (Vector2.Distance(transform.position, currentPoint.position) < 1f && currentPoint == pointB.transform)
-            {
-                currentPoint = pointA.transform;
-            }
+        if (Vector2.Distance(transform.position, currentPoint.position) < 1f && currentPoint == pointB.transform)
+        { 
+            currentPoint = pointA.transform;
+            Flip();
+        }
 
-            if (Vector2.Distance(transform.position, currentPoint.position) < 1f && currentPoint == pointA.transform)
-            {
-                currentPoint = pointB.transform;
-            }
+        if (Vector2.Distance(transform.position, currentPoint.position) < 1f && currentPoint == pointA.transform)
+        {
+            currentPoint = pointB.transform;
+            Flip();
         }
 
         // Variables for checking if enemy is stunned.
@@ -59,6 +61,14 @@ public class EnemyPatrol : MonoBehaviour
         }
     }
 
+    // Function used to Flip Enemy Sprites when walking back and forth.
+    private void Flip()
+    {
+        Vector3 localScale = transform.localScale;
+        localScale.x *= -1;
+        transform.localScale = localScale;
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
@@ -66,13 +76,13 @@ public class EnemyPatrol : MonoBehaviour
         Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
     }
 
-    public void GetStunned()
+    public void GetStunned(float time)
     {
         tempSpeed = speed;
-        StartCoroutine(Stunned(3));
+        StartCoroutine(Stunned(time));
     }
 
-    IEnumerator Stunned(int seconds)
+    IEnumerator Stunned(float seconds)
     {   
         speed = 0;
         GetComponent<BoxCollider2D>().isTrigger = true;

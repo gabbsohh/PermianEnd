@@ -175,7 +175,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
-  enemyPatrol: {fileID: -6286246098522691698}
+  damageSoundClips:
+  - {fileID: 8300000, guid: 8a7e46811b9bb234c8ad004bc4953a37, type: 3}
+  - {fileID: 8300000, guid: 5593956e1a81b7a4eac2343fc7e60147, type: 3}
+  - {fileID: 8300000, guid: ecf14ee65d9560c44bc03b36ddb714b7, type: 3}
+  enemyPatrol: {fileID: 0}
   isArmored: 0
 --- !u!114 &2392322970437380375
 MonoBehaviour:
