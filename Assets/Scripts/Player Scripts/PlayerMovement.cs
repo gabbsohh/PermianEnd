@@ -5,13 +5,17 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
-    [SerializeField] public float speed = 8f;
-    [SerializeField] public float jump = 6f;
+    [SerializeField] public float speed = 6.5f;
+    [SerializeField] public float jump = 10f;
+    private float tempSpeed = 0f;
+    private float tempJump = 0f;
     [SerializeField] private AudioClip jumpSoundClip;
     private bool isFacingRight = true;
     PlayerHealth pHealth;
 
-    private bool doubleJump;
+    private bool canDoubleJump;
+
+    private bool canFlip = true;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -31,27 +35,35 @@ public class PlayerMovement : MonoBehaviour
 
             if (IsGrounded() && !Input.GetKey(KeyCode.Space))
             {
-                doubleJump = false;
+                canDoubleJump = true;
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (IsGrounded() || doubleJump)
+                if (IsGrounded())
                 {
-                    rb.velocity = new Vector2(rb.velocity.x, jump);
+                    //rb.velocity = new Vector2(rb.velocity.x, jump);
+                    rb.velocity = Vector2.up * jump;
                     AudioManager.instance.PlaySoundFXClip(jumpSoundClip, transform, 0.5f);
-                    doubleJump = !doubleJump;
+                    Debug.Log("Jumping!");
+                    //doubleJump = !doubleJump;
                 }
-
-                Debug.Log("Jumping!");
+                else
+                {
+                    if(canDoubleJump)
+                    {
+                        rb.velocity = Vector2.up * jump;
+                        AudioManager.instance.PlaySoundFXClip(jumpSoundClip, transform, 0.5f);
+                        Debug.Log("Double Jumping!");
+                        canDoubleJump = false;
+                    }
+                }
             }
 
-            if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0)
+            if(canFlip == true)
             {
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+                Flip();
             }
-
-            Flip();
         }
     
     }
@@ -79,7 +91,19 @@ public class PlayerMovement : MonoBehaviour
 
     public void StopMovement()
     {
+        tempSpeed = speed;
+        tempJump = jump;
         speed = 0f;
         jump = 0f;
+        canFlip = false;
+        Physics2D.IgnoreLayerCollision(9,6,true);
+    }
+
+    public void ResumeMovement()
+    {
+        speed = tempSpeed;
+        jump = tempJump;
+        canFlip = true;
+        Physics2D.IgnoreLayerCollision(9,6,false);
     }
 }

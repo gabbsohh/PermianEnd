@@ -16,6 +16,8 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private Image healthBarForeground; 
 
+    [SerializeField] public Vector3 respawnPoint;
+
     public bool isDead;
 
     public PlayerMovement playerMovement;
@@ -50,7 +52,9 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             lifeCounter.UpdateLives();
-            Debug.Log("Player life went down by 1");
+            Debug.Log("Player's lives went down by 1");
+            StartCoroutine(Die());
+            isDead = true;
         }
         else
         {
@@ -64,30 +68,28 @@ public class PlayerHealth : MonoBehaviour
         // Death Animation for Player goes here.
 
         // All movement stops, all collision is removed and the player is destroyed afterwards.
+        // Uses the player's movement script reduce their speed and jump so they can't move.
         gameObject.GetComponent<PlayerMovement>().StopMovement();
         yield return new WaitForSeconds(1);
         if (lifeCounter.currentLives > 0)
         {
             currentHealth = maxHealth;
-            isDead = false;
             UpdateHealthBar();
         }
         else 
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
             PlayerPrefs.DeleteKey("CurrentLives");
-            Destroy(gameObject);
         }
-
-        // Rigidbody stays in place to prevent player from falling off the map mario-style.
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
-
-        // Box Collider turns into a trigger to prevent collision with enemies during death.
-        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
 
         // Change the number here to the duration of the death animation so the whole thing plays out.
         yield return new WaitForSeconds(3);
-        Destroy(gameObject);
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        Respawn();
+        yield return new WaitForSeconds(3);
+        gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        isDead = false;
+        gameObject.GetComponent<PlayerMovement>().ResumeMovement();
     }
 
     public void Heal(int healAmount)
@@ -123,5 +125,10 @@ public class PlayerHealth : MonoBehaviour
         }
         StompChecker.GetComponent<BoxCollider2D>().enabled = true;
         Physics2D.IgnoreLayerCollision(9,6,false);
+    }
+
+    public void Respawn()
+    {
+        transform.position = respawnPoint;
     }
 }
