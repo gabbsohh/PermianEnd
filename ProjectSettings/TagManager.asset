@@ -10,7 +10,7 @@ TagManager:
   - ArmoredEnemy
   - Obstacle
   - Key
-  - Collectable
+  - RespawnPoint
   layers:
   - Default
   - TransparentFX
@@ -21,7 +21,7 @@ TagManager:
   - Enemy
   - ArmoredEnemy
   - Obstacle
-  - 
+  - Player
   - 
   - 
   - 
