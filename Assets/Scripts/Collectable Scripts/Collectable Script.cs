@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CollectableScript : MonoBehaviour
 {
-    [SerializeField] private AudioClip[] collectableSoundClips;
     public int value;
 
     // Start is called before the first frame update
@@ -25,7 +24,6 @@ public class CollectableScript : MonoBehaviour
         { 
             Destroy(gameObject);
             CollectableCounter.instance.IncreaseCollectables(value);
-            AudioManager.instance.PlayRandomSoundFXClip(collectableSoundClips, transform, 0.5f);
         }
     }
 }

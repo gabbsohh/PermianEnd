@@ -145,4 +145,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 0}
   player: {fileID: 0}
-  keySoundClip: {fileID: 8300000, guid: 1bb2af5adb9ec304aa4600c108da09e3, type: 3}

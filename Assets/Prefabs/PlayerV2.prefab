@@ -100,11 +100,7 @@ GameObject:
   - component: {fileID: 94825448895059912}
   - component: {fileID: 6178519183296953393}
   m_Layer: 0
-<<<<<<<< HEAD:Assets/Prefabs/PlayerV2.prefab
   m_Name: PlayerV2
-========
-  m_Name: OldPlayer2
->>>>>>>> Jack's-Polishing-Branch:Assets/Prefabs/OldPlayer2.prefab
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

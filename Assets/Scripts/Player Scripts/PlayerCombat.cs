@@ -6,8 +6,6 @@ public class PlayerCombat : MonoBehaviour
 {
     //public Animator animator;
 
-    [SerializeField] private AudioClip[] swingSoundClips;
-
     public float attackRate = 0.5f;
     public float canAttack = -1f;
     public float canSwitch = -1f;
@@ -40,7 +38,6 @@ public class PlayerCombat : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Q) && Time.time > canAttack)
         {
             Attack();
-            AudioManager.instance.PlayRandomSoundFXClip(swingSoundClips, transform, 1f);
         }
 
         if(Input.GetKeyDown(KeyCode.E) && Time.time > canSwitch)
@@ -52,15 +49,15 @@ public class PlayerCombat : MonoBehaviour
         if(currentWeapon == "Blade")
         {
             attackDamage = 1;
-            attackRate = 0.55f;
+            attackRate = 0.35f;
             usingPick = false;
             // Use animation set for blade.
         }
 
         if(currentWeapon == "Pickaxe")
         {
-            attackDamage = 3;
-            attackRate = 1.3f;
+            attackDamage = 2;
+            attackRate = 1.0f;
             usingPick = true;
             // Use animation set for pickaxe.
         }

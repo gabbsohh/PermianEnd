@@ -133,5 +133,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19bb1132645c6844a1bfc39d4a7419c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSoundClip: {fileID: 8300000, guid: 2d6fa037989bdfd4caa6a2eafb835988, type: 3}
   healAmount: 1

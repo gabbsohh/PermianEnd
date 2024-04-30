@@ -5,8 +5,6 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] public int maxHealth;
-    //[SerializeField] private AudioClip damageSoundClip;
-    [SerializeField] private AudioClip[] damageSoundClips;
 
     public EnemyPatrol enemyPatrol;
 
@@ -28,8 +26,6 @@ public class EnemyHealth : MonoBehaviour
             if(isArmored == false)
             {
                 currentHealth -= damage;
-                //AudioManager.instance.PlaySoundFXClip(damageSoundClip, transform, 0.5f);
-                AudioManager.instance.PlayRandomSoundFXClip(damageSoundClips, transform, 0.5f);
             }
         }
 
@@ -38,13 +34,6 @@ public class EnemyHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             StartCoroutine(Die());
-        }
-        else
-        {
-            if(enemyPatrol.isStunned == false)
-            {
-                enemyPatrol.GetStunned(0.5f);
-            }
         }
     }
 
