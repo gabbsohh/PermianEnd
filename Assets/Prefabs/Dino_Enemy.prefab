@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2392322970437380375}
   - component: {fileID: -6286246098522691698}
   - component: {fileID: 7161647060160494705}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dino_Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c36f213fec74b2240b2892a1f09ec688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 6178519183296953393, guid: fafbb99493e39344e87463e4a3699d09, type: 3}
+  playerHealth: {fileID: 5158142944001912246, guid: 0a0a9e00199c87d408b21805e1889446, type: 3}
   damage: 1
 --- !u!114 &-6286246098522691698
 MonoBehaviour:
