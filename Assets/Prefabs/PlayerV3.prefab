@@ -220,9 +220,9 @@ GameObject:
   - component: {fileID: 3940738778660222709}
   - component: {fileID: 3498628750782197124}
   - component: {fileID: 5177814544951922037}
-  - component: {fileID: 3496214655755202996}
   - component: {fileID: 7343011391660685185}
-  - component: {fileID: 9159354778180798521}
+  - component: {fileID: -2962666449697787981}
+  - component: {fileID: 3496214655755202996}
   m_Layer: 0
   m_Name: PlayerV3
   m_TagString: Player
@@ -391,26 +391,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
---- !u!114 &3496214655755202996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8835167956795860996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9352610f94f7f4a4ca8939b7a171aff2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 5
-  currentHealth: -33
-  rb: {fileID: 3940738778660222709}
-  healthBarForeground: {fileID: 0}
-  isDead: 0
-  playerMovement: {fileID: 5177814544951922037}
-  uiManager: {fileID: 0}
-  lifeCounter: {fileID: 0}
 --- !u!114 &7343011391660685185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,7 +417,7 @@ MonoBehaviour:
   attackDamage: 1
   weapons: []
   usingPick: 0
---- !u!114 &9159354778180798521
+--- !u!114 &-2962666449697787981
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -446,8 +426,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 8835167956795860996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d1dd37afaca2f848bb5fb13a440b5a5, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bd46df6d1f06244e92dffa16ed3b0e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounce: 5
-  rb2d: {fileID: 0}
+  maxLives: 3
+  currentLives: 3
+  livesText: {fileID: 0}
+--- !u!114 &3496214655755202996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8835167956795860996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9352610f94f7f4a4ca8939b7a171aff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  currentHealth: -33
+  rb: {fileID: 3940738778660222709}
+  healthBarForeground: {fileID: 0}
+  isDead: 0
+  playerMovement: {fileID: 5177814544951922037}
+  uiManager: {fileID: 0}
+  lifeCounter: {fileID: 0}

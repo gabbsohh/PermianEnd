@@ -39,9 +39,9 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
-            Debug.Log("Player life went down by 1");
-            
         }
+
+        Debug.Log("Player life went down by 1");
     }
 
     public IEnumerator Die()
