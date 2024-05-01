@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    //public Animator animator;
+    public Animator animator;
 
     public float attackRate = 0.5f;
     public float canAttack = -1f;
@@ -29,6 +29,9 @@ public class PlayerCombat : MonoBehaviour
         // Adds the default weapon to the weapon list.
         weapons.Add("Blade");
         currentWeapon = weapons[0];
+
+        // Get Animator
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -52,6 +55,7 @@ public class PlayerCombat : MonoBehaviour
             attackRate = 0.35f;
             usingPick = false;
             // Use animation set for blade.
+            animator.SetInteger("weaponCounter", 0);
         }
 
         if(currentWeapon == "Pickaxe")
@@ -60,6 +64,8 @@ public class PlayerCombat : MonoBehaviour
             attackRate = 1.0f;
             usingPick = true;
             // Use animation set for pickaxe.
+            animator.SetInteger("weaponCounter", 1);
+            animator.SetBool("isAttacking", true);
         }
     }
 
@@ -84,6 +90,7 @@ public class PlayerCombat : MonoBehaviour
     void Attack()
     {
         // Scripts For Animating Goes Here
+        animator.SetBool("isAttacking", true);
 
         // Scripts For Attack Functionality
         Debug.Log("Player Attacked.");
@@ -118,6 +125,17 @@ public class PlayerCombat : MonoBehaviour
         }
 
         canAttack = Time.time + attackRate;
+
+        StartCoroutine(ResetAttackAnimation());
+    }
+
+    IEnumerator ResetAttackAnimation()
+    {
+        // Wait for the duration of the attack animation
+        yield return new WaitForSeconds(attackRate);
+
+        // Reset isActive parameter to false
+        animator.SetBool("isAttacking", false);
     }
 
     void OnDrawGizmosSelected()
