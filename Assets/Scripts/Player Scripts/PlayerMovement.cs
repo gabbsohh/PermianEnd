@@ -97,6 +97,7 @@ public class PlayerMovement : MonoBehaviour
         jump = 0f;
         canFlip = false;
         Physics2D.IgnoreLayerCollision(9,6,true);
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
     public void ResumeMovement()
@@ -105,5 +106,7 @@ public class PlayerMovement : MonoBehaviour
         jump = tempJump;
         canFlip = true;
         Physics2D.IgnoreLayerCollision(9,6,false);
+        rb.constraints = RigidbodyConstraints2D.None;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 }
