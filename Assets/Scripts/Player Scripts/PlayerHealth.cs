@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] int maxHealth;
-    [SerializeField] int currentHealth;
+    [SerializeField] public int currentHealth;
     [SerializeField] private Rigidbody2D rb;
 
     [SerializeField] private Image healthBarForeground; 
