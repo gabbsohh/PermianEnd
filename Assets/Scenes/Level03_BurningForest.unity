@@ -5322,6 +5322,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1476122411}
+    - target: {fileID: 8887933392599064471, guid: 138bd78ede0c2e84cb2ef1ee83a8200e, type: 3}
+      propertyPath: hurtSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 55cee75e27268c94aadff7a1c2195e53, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
