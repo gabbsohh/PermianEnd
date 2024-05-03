@@ -26,6 +26,6 @@ public class CollectableCounter : MonoBehaviour
     {
         currentCollectable += v;
         collectableText.text = "COLLECTABLES: " + currentCollectable.ToString();
-        FindObjectOfType<KeyScript>().AllCollected();
+        //FindObjectOfType<KeyScript>().AllCollected();
     }
 }

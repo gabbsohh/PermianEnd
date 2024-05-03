@@ -13,8 +13,7 @@ public class KeyScript : MonoBehaviour
 
     private void Start()
     {
-        this.gameObject.SetActive(false);
-        collectableCounter = FindObjectOfType<CollectableCounter>();
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -27,16 +26,5 @@ public class KeyScript : MonoBehaviour
         }
     }
 
-    public void AllCollected()
-    {
-        if (collectableCounter.currentCollectable >= 7)
-        {
-            this.gameObject.SetActive(true);
-        }
-        else 
-        { 
-            this.gameObject.SetActive(false); 
-        }
-    }
 
 }

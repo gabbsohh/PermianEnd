@@ -18,11 +18,11 @@ public class PlayerHealth : MonoBehaviour
 
     public PlayerMovement playerMovement;
     public UIManager uiManager;
-    public LifeCounterScript lifeCounter;
 
     private void Start()
     {
         currentHealth = maxHealth;
+        GameData.health = maxHealth;
         isDead = false;
     }
 
@@ -35,13 +35,13 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damage;
         UpdateHealthBar();
+        GameData.health = currentHealth;
         Debug.Log("Player took damage.");
         if (currentHealth <= 0)
         {
             Die();
         }
 
-        Debug.Log("Player life went down by 1");
     }
 
     public IEnumerator Die()
@@ -67,6 +67,7 @@ public class PlayerHealth : MonoBehaviour
     { 
         currentHealth += healAmount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        GameData.health = currentHealth;
     }
 
     void UpdateHealthBar()
@@ -74,7 +75,6 @@ public class PlayerHealth : MonoBehaviour
         if (healthBarForeground != null)
         {
             float fillAmount = Mathf.Clamp(currentHealth / (float)maxHealth, 0, 1);
-            Debug.Log("Health bar fill amount: " + fillAmount);
             healthBarForeground.fillAmount = fillAmount;
         }
         else
