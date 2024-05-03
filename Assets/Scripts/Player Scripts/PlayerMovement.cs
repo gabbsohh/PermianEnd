@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool doubleJump;
 
+    Animator animator;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -19,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         pHealth = FindObjectOfType<PlayerHealth>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -31,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
             if (IsGrounded() && !Input.GetKey(KeyCode.Space))
             {
                 doubleJump = false;
+                animator.SetBool("isJumping", !IsGrounded());
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
@@ -40,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
                     rb.velocity = new Vector2(rb.velocity.x, jump);
 
                     doubleJump = !doubleJump;
+
+                    animator.SetBool("isJumping", IsGrounded());
                 }
 
                 Debug.Log("Jumping!");
@@ -58,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
+        animator.SetFloat("yVelocity", rb.velocity.y);
     }
 
     private bool IsGrounded()

@@ -7,11 +7,13 @@ public class KeyScript : MonoBehaviour
     [SerializeField] private DoorScript door;
     [SerializeField] GameObject player;
 
+    CollectableCounter collectableCounter;
+
     private bool isPickedUp;
 
-    private void Update()
+    private void Start()
     {
-
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -23,5 +25,6 @@ public class KeyScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 
 }

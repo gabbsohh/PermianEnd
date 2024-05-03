@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DoorScript : MonoBehaviour
 {
+
     public bool locked;
 
     [SerializeField] GameObject player;
@@ -26,6 +27,7 @@ public class DoorScript : MonoBehaviour
         if (!locked && distance < 0.5f)
         {
             //new WaitForSeconds(1);
+            Debug.Log("Go to next scene");
             SceneManager.LoadScene(2);
         }
     }
@@ -34,6 +36,7 @@ public class DoorScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && !locked)
         {
+            Debug.Log("Player collided with door");
             locked = false;
         }
     }
