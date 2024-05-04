@@ -65,7 +65,7 @@ public class PlayerCombat : MonoBehaviour
             usingPick = true;
             // Use animation set for pickaxe.
             animator.SetInteger("weaponCounter", 1);
-            animator.SetBool("isAttacking", true);
+            //animator.SetBool("isAttacking", true);
         }
     }
 
