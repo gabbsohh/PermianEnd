@@ -19,7 +19,7 @@ public class CollectableCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        collectableText.text = " " + GameData.collectables.ToString();   
+        collectableText.text = "COLLECTABLES: " + GameData.collectables.ToString();   
     }
 
     // Update is called once per frame
