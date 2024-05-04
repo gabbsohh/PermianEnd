@@ -10,7 +10,7 @@ public class CollectableScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class CollectableScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         { 
-            //Destroy(gameObject);
+            Destroy(gameObject);
             CollectableCounter.instance.IncreaseCollectables(value);
             gameObject.SetActive(false);
         }

@@ -27,7 +27,7 @@ public class CollectableCounter : MonoBehaviour
     {
         currentCollectable += v;
         
-        collectableText.text = "COLLECTABLES: " + currentCollectable.ToString();
+        collectableText.text = " " + currentCollectable.ToString();
 
         GameData.collectables += v;
 
