@@ -19,6 +19,9 @@ public class PlayerHealth : MonoBehaviour
     public PlayerMovement playerMovement;
     public UIManager uiManager;
 
+    // respawn?
+    public Transform respawnPosition;
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -48,6 +51,8 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Player has died.");
         // death anim
+
+        transform.position = respawnPosition.position;
 
         // All movement stops, all collision is removed and the player is destroyed afterwards.
         gameObject.GetComponent<PlayerMovement>().StopMovement();

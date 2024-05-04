@@ -13,19 +13,24 @@ public class CollectableCounter : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        collectableText.text = "COLLECTABLES: " + currentCollectable.ToString();   
+        collectableText.text = " " + GameData.collectables.ToString();   
     }
 
     // Update is called once per frame
     public void IncreaseCollectables(int v)
     {
         currentCollectable += v;
+        
         collectableText.text = "COLLECTABLES: " + currentCollectable.ToString();
-        //FindObjectOfType<KeyScript>().AllCollected();
+
+        GameData.collectables += v;
+
     }
+
 }

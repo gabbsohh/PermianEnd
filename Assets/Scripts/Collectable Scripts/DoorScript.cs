@@ -9,10 +9,14 @@ public class DoorScript : MonoBehaviour
     public bool locked;
 
     [SerializeField] GameObject player;
+
+    private int currentSceneIndex;
+
     // Start is called before the first frame update
     private void Start()
     {
         locked = true;
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
     public void UnlockDoor()
     {
@@ -28,7 +32,7 @@ public class DoorScript : MonoBehaviour
         {
             //new WaitForSeconds(1);
             Debug.Log("Go to next scene");
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(currentSceneIndex + 1);
         }
     }
 
