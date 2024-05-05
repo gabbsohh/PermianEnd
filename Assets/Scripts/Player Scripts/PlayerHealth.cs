@@ -12,7 +12,12 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] public int currentHealth;
     [SerializeField] private Rigidbody2D rb;
 
-    [SerializeField] private Image healthBarForeground; 
+    //[SerializeField] private Image healthBarForeground; 
+
+    // using heart sprites instead
+    public Sprite emptyHeart;
+    public Sprite fullHeart;
+    public Image[] hearts;
 
     public bool isDead;
 
@@ -77,7 +82,7 @@ public class PlayerHealth : MonoBehaviour
 
     void UpdateHealthBar()
     {
-        if (healthBarForeground != null)
+        /*if (healthBarForeground != null)
         {
             float fillAmount = Mathf.Clamp(currentHealth / (float)maxHealth, 0, 1);
             healthBarForeground.fillAmount = fillAmount;
@@ -85,6 +90,17 @@ public class PlayerHealth : MonoBehaviour
         else
         {
             Debug.LogError("Health bar foreground image is not assigned!");
+        }*/
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < maxHealth)
+            {
+                hearts[i].enabled = true;
+            }
+            else
+            {
+                hearts[i].enabled = false;
+            }
         }
     }
 
