@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canFlip = true;
 
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private BoxCollider2D bc;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
