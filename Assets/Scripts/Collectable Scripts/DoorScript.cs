@@ -13,7 +13,7 @@ public class DoorScript : MonoBehaviour
     private int currentSceneIndex;
 
     // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
         locked = true;
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -31,8 +31,8 @@ public class DoorScript : MonoBehaviour
         if (!locked && distance < 0.5f)
         {
             //new WaitForSeconds(1);
-            Debug.Log("Go to next scene");
-            SceneManager.LoadScene(currentSceneIndex + 1);
+            Debug.Log("Player within range to open door");
+            SceneController.instance.NextLevel();
         }
     }
 

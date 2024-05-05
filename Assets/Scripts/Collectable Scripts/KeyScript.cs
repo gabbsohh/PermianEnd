@@ -21,6 +21,7 @@ public class KeyScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && !isPickedUp)
         {
             isPickedUp = true;
+            Debug.Log("Key picked up");
             door.UnlockDoor();
             Destroy(gameObject);
         }
