@@ -9,6 +9,8 @@ TagManager:
   - Pickaxe
   - ArmoredEnemy
   - Obstacle
+  - Key
+  - Collectable
   layers:
   - Default
   - TransparentFX

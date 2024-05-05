@@ -10,6 +10,8 @@ public class CollectableCounter : MonoBehaviour
     public TMP_Text collectableText;
     public int currentCollectable = 0;
 
+    public GameObject key;
+
     private void Awake()
     {
         instance = this;
@@ -17,9 +19,14 @@ public class CollectableCounter : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        collectableText.text = " " + GameData.collectables.ToString();   
+        collectableText.text = " " + GameData.collectables.ToString();
+
+        if (currentCollectable == 1 && key != null)
+        {
+            key.gameObject.SetActive(true);
+        }
     }
 
     // Update is called once per frame

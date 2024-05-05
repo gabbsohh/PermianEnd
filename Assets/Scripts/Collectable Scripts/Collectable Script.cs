@@ -6,6 +6,7 @@ public class CollectableScript : MonoBehaviour
 {
     public int value;
 
+    private bool collected = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +22,14 @@ public class CollectableScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (collected)
+        {
+            return;
+        }
+
         if (other.gameObject.CompareTag("Player"))
         { 
-            Destroy(gameObject);
+            collected = true;
             CollectableCounter.instance.IncreaseCollectables(value);
             gameObject.SetActive(false);
         }

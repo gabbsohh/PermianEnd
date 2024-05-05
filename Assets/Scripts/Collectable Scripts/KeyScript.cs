@@ -11,9 +11,9 @@ public class KeyScript : MonoBehaviour
 
     private bool isPickedUp;
 
-    private void Start()
+    private void Awake()
     {
-        
+        gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
