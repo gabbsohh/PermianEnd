@@ -5,14 +5,8 @@ using UnityEngine;
 public class MovingPlatform : MonoBehaviour
 {
     public Transform platform;
-    public Transform platformTrigger;
     public Transform startPoint;
     public Transform endPoint;
-    public Transform triggerStartPoint;
-    public Transform triggerEndPoint;
-
-    //public Rigidbody2D rb;
-    public BoxCollider2D bc;
 
     public float speed = 1.5f;
 
@@ -21,10 +15,8 @@ public class MovingPlatform : MonoBehaviour
     private void Update()
     {
         Vector2 target = currentMovementTarget();
-        Vector2 triggerTarget = currentTriggerTarget();
 
         platform.position = Vector2.Lerp(platform.position, target, speed * Time.deltaTime);
-        platformTrigger.position = Vector2.Lerp(platformTrigger.position, triggerTarget, speed * Time.deltaTime);
 
         float distance = (target - (Vector2)platform.position).magnitude;
 
@@ -32,7 +24,6 @@ public class MovingPlatform : MonoBehaviour
         {
             direction *= -1;
         }
-
     }
 
     Vector2 currentMovementTarget()
@@ -44,18 +35,6 @@ public class MovingPlatform : MonoBehaviour
         else
         {
             return endPoint.position;
-        }
-    }
-
-    Vector2 currentTriggerTarget()
-    {
-        if(direction == 1)
-        {
-            return triggerStartPoint.position;
-        }
-        else
-        {
-            return triggerEndPoint.position;
         }
     }
 
