@@ -5,18 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class DoorScript : MonoBehaviour
 {
-
     public bool locked;
-
+    [SerializeField] int sceneIndex;
     [SerializeField] GameObject player;
-
-    private int currentSceneIndex;
-
     // Start is called before the first frame update
-    private void Awake()
+    private void Start()
     {
         locked = true;
-        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
     public void UnlockDoor()
     {
@@ -26,22 +21,14 @@ public class DoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector2.Distance(player.transform.position, transform.position);
-
-        if (!locked && distance < 0.5f)
-        {
-            //new WaitForSeconds(1);
-            Debug.Log("Player within range to open door");
-            SceneController.instance.NextLevel();
-        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && !locked)
+        if (other.gameObject.CompareTag("Player") && locked == false)
         {
-            Debug.Log("Player collided with door");
-            locked = false;
+            SceneManager.LoadScene(sceneIndex);
         }
     }
 }

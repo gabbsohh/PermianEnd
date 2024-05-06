@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class KeyScript : MonoBehaviour
 {
-    [SerializeField] private DoorScript door;
+    [SerializeField] private GameObject door;
     [SerializeField] GameObject player;
-
-    CollectableCounter collectableCounter;
+    [SerializeField] private AudioClip keySoundClip;
 
     private bool isPickedUp;
 
-    private void Awake()
+    private void Update()
     {
-        gameObject.SetActive(false);
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -21,11 +20,11 @@ public class KeyScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && !isPickedUp)
         {
             isPickedUp = true;
-            Debug.Log("Key picked up");
-            door.UnlockDoor();
+            //door.UnlockDoor();
+            door.GetComponent<DoorScript>().UnlockDoor();
+            AudioManager.instance.PlaySoundFXClip(keySoundClip, transform, 0.5f);
             Destroy(gameObject);
         }
     }
-
 
 }
