@@ -23,7 +23,7 @@ public class EnemyCombat : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            playerHealth.GetHurt(damage);
+            collision.gameObject.GetComponent<PlayerHealth>().GetHurt(damage);
         }
     }
 }

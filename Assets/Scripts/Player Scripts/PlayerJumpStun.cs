@@ -7,8 +7,6 @@ public class PlayerJumpStun : MonoBehaviour
     public float bounce;
     public Rigidbody2D rb2d;
 
-    [SerializeField] private AudioClip jumpStunSoundClip;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -36,8 +34,7 @@ public class PlayerJumpStun : MonoBehaviour
                 // Stun the enemy once they're jumped on.
                 Debug.Log("Enemy Stunned!");
                 // Call the stun function of EnemyPatrol.
-                other.gameObject.GetComponent<EnemyPatrol>().GetStunned(3f);
-                AudioManager.instance.PlaySoundFXClip(jumpStunSoundClip, transform, 0.5f);
+                other.gameObject.GetComponent<EnemyPatrol>().GetStunned();
                 // Make the player bounce off of the enemy.
                 rb2d.velocity = new Vector2(rb2d.velocity.x, bounce);
             }
