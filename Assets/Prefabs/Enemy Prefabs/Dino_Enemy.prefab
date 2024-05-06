@@ -98,7 +98,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3786245174455951051}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -146,7 +146,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0085572, y: 2.5757227}
@@ -175,7 +175,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
-  enemyPatrol: {fileID: -6286246098522691698}
+  damageSoundClips:
+  - {fileID: 8300000, guid: 8a7e46811b9bb234c8ad004bc4953a37, type: 3}
+  - {fileID: 8300000, guid: 5593956e1a81b7a4eac2343fc7e60147, type: 3}
+  - {fileID: 8300000, guid: ecf14ee65d9560c44bc03b36ddb714b7, type: 3}
+  enemyPatrol: {fileID: 0}
   isArmored: 0
 --- !u!114 &2392322970437380375
 MonoBehaviour:
@@ -189,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c36f213fec74b2240b2892a1f09ec688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 3496214655755202996, guid: 148954485393d9748a82cd0e1c8368b3, type: 3}
+  playerHealth: {fileID: 5158142944001912246, guid: 0a0a9e00199c87d408b21805e1889446, type: 3}
   damage: 1
 --- !u!114 &-6286246098522691698
 MonoBehaviour:
