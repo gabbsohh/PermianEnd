@@ -6550,6 +6550,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverMenu: {fileID: 1783304845}
+--- !u!1 &1798808998 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1302935299245098502, guid: c2d7c729560b2d94e956983dd32c7955, type: 3}
+  m_PrefabInstance: {fileID: 7836703352523779935}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1866288924
 GameObject:
   m_ObjectHideFlags: 0
@@ -7504,10 +7509,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 901576125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -398.45892, y: 243.93005}
-  m_SizeDelta: {x: 281.0822, y: 84.1399}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -83, y: 36}
+  m_SizeDelta: {x: -201.3, y: 47.400024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2054276071
 MonoBehaviour:
@@ -7529,7 +7534,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Q to Attack Enemies. Grey Circle is Attack Radius.
+  m_text: Press Q to Attack Nearby Enemies.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -7592,7 +7597,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -191.14944, w: 0}
+  m_margin: {x: 0, y: 0, z: -771.1265, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -8482,6 +8487,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 866767585}
+    - target: {fileID: 1930869632802957072, guid: c2d7c729560b2d94e956983dd32c7955, type: 3}
+      propertyPath: sceneIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4355813485022856591, guid: c2d7c729560b2d94e956983dd32c7955, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.86
@@ -8590,7 +8599,7 @@ PrefabInstance:
     - target: {fileID: 8864618341730254408, guid: dede93d0c9417404eac555fa16b266cb, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 1930869632802957072, guid: c2d7c729560b2d94e956983dd32c7955, type: 3}
+      objectReference: {fileID: 1798808998}
     - target: {fileID: 8864618341730254408, guid: dede93d0c9417404eac555fa16b266cb, type: 3}
       propertyPath: player
       value: 

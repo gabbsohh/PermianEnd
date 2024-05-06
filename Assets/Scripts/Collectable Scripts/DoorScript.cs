@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class DoorScript : MonoBehaviour
 {
     public bool locked;
-
+    [SerializeField] int sceneIndex;
     [SerializeField] GameObject player;
     // Start is called before the first frame update
     private void Start()
@@ -21,20 +21,14 @@ public class DoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector2.Distance(player.transform.position, transform.position);
-
-        if (!locked && distance < 0.5f)
-        {
-            //new WaitForSeconds(1);
-            SceneManager.LoadScene(2);
-        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && !locked)
+        if (other.gameObject.CompareTag("Player") && locked == false)
         {
-            locked = false;
+            SceneManager.LoadScene(sceneIndex);
         }
     }
 }

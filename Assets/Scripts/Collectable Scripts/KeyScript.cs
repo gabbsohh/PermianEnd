@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KeyScript : MonoBehaviour
 {
-    [SerializeField] private DoorScript door;
+    [SerializeField] private GameObject door;
     [SerializeField] GameObject player;
     [SerializeField] private AudioClip keySoundClip;
 
@@ -20,7 +20,8 @@ public class KeyScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && !isPickedUp)
         {
             isPickedUp = true;
-            door.UnlockDoor();
+            //door.UnlockDoor();
+            door.GetComponent<DoorScript>().UnlockDoor();
             AudioManager.instance.PlaySoundFXClip(keySoundClip, transform, 0.5f);
             Destroy(gameObject);
         }
