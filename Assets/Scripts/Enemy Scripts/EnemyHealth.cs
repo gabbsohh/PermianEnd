@@ -34,6 +34,7 @@ public class EnemyHealth : MonoBehaviour
         }
 
         // Hurt Animation for Enemy goes here.
+        animator.SetTrigger("hurt");
 
         if(currentHealth <= 0)
         {
