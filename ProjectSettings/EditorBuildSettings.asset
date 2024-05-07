@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level03_EndOfWorld.unity
     guid: 7ef20cd0aba37524f8000557fb0d07c0
   - enabled: 1
-    path: Assets/Scenes/CaveLevelTest.unity
+    path: Assets/Scenes/FakeLevel2.unity
     guid: a5ab74456cbb4ea4aa2eb2397e103660
   - enabled: 1
     path: Assets/Scenes/EnemyTestingScene.unity
