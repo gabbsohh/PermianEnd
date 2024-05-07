@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Title.unity
+    path: Assets/Scenes/TitleIveDoneLiterallyNothingWith.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Level01_Forest.unity
+    path: Assets/Scenes/JacksForestScene.unity
     guid: 8aa0c8372f448c54ab0f58b1747887cd
   - enabled: 0
     path: Assets/Scenes/Level02_Cave.unity
@@ -18,6 +18,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Level03_EndOfWorld.unity
     guid: 7ef20cd0aba37524f8000557fb0d07c0
   - enabled: 1
-    path: Assets/Scenes/Level03_BurningForest.unity
+    path: Assets/Scenes/JacksEndScene.unity
     guid: ec69a1a7dfff4e44f9745a7117491081
   m_configObjects: {}
