@@ -11,6 +11,7 @@ public class EnemyHealth : MonoBehaviour
     public EnemyPatrol enemyPatrol;
 
     [SerializeField] public bool isArmored;
+    [SerializeField] private ParticleSystem deathParticle;
 
     Animator animator;
 
@@ -43,6 +44,7 @@ public class EnemyHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             StartCoroutine(Die());
+            deathParticle.Play();
         }
         else
         {
