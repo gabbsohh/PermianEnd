@@ -14,6 +14,7 @@ public class FallingPlatform : MonoBehaviour
     {
         defaultPos = transform.position;
         rb = GetComponent<Rigidbody2D>();
+        Physics2D.IgnoreLayerCollision(3,3,true);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
