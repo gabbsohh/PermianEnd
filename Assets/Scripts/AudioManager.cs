@@ -7,7 +7,13 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     [SerializeField] private AudioSource soundFXObject;
+    [SerializeField] private AudioClip bgMusic;
     
+    private void Start()
+    {
+        AudioManager.instance.PlaySoundFXClip(bgMusic, transform, 0.5f);   
+    }
+
     private void Awake()
     {
         if (instance == null)
