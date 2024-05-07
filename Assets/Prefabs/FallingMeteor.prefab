@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e697a80e56850849b9db8979a69b418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 2257282040787274624, guid: dd1dd06f88394454c825e84df1516152, type: 3}
   fallingMeteorScript: {fileID: 2211447447259962194}
   meteorTriggerArea: {fileID: 5530492587204789019}
 --- !u!95 &6004652141486797861
@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 1816853608583524271}
   - component: {fileID: 5945526020407598138}
   - component: {fileID: 2211447447259962194}
+  - component: {fileID: -4749833341893694895}
   m_Layer: 0
   m_Name: FallingMeteor
   m_TagString: Untagged
@@ -316,3 +317,24 @@ MonoBehaviour:
   meteorRB: {fileID: 3471944117460946499}
   player: {fileID: 0}
   meteorTimer: 10
+--- !u!95 &-4749833341893694895
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5530492587204789019}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c41b417e517142841b6e2dafb50f57cf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

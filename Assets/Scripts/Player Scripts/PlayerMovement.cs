@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canDoubleJump;
 
+    Animator animator;
+
     private bool canFlip = true;
 
     [SerializeField] private Rigidbody2D rb;
@@ -25,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         pHealth = FindObjectOfType<PlayerHealth>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -37,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
             if (IsGrounded() && !Input.GetKey(KeyCode.Space))
             {
                 canDoubleJump = true;
+                animator.SetBool("isJumping", !IsGrounded());
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
@@ -47,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
                     rb.velocity = Vector2.up * jump;
                     AudioManager.instance.PlaySoundFXClip(jumpSoundClip, transform, 0.5f);
                     Debug.Log("Jumping!");
+                    animator.SetBool("isJumping", IsGrounded());
                     //doubleJump = !doubleJump;
                 }
                 else
@@ -72,6 +78,8 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
+        animator.SetFloat("yVelocity", rb.velocity.y);
     }
 
     private bool IsGrounded()

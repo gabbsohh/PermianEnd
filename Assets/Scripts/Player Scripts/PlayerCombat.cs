@@ -24,7 +24,7 @@ public class PlayerCombat : MonoBehaviour
     public bool usingPick;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         // Adds the default weapon to the weapon list.
         weapons.Add("Blade");

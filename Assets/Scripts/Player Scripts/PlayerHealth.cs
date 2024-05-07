@@ -8,8 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] int maxHealth = 3;
-    [SerializeField] int currentHealth;
+    [SerializeField] public int maxHealth = 3;
+    [SerializeField] public int currentHealth;
     [SerializeField] private Rigidbody2D rb;
 
     [SerializeField] private AudioClip hurtSoundClip;
@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
 
     public PlayerMovement playerMovement;
     public UIManager uiManager;
-    public LifeCounterScript lifeCounter;
+    //public LifeCounterScript lifeCounter;
 
     [SerializeField] private float iFramesDuration;
     [SerializeField] private int numFlashes;
@@ -51,7 +51,7 @@ public class PlayerHealth : MonoBehaviour
         AudioManager.instance.PlaySoundFXClip(hurtSoundClip, transform, 0.5f);
         if (currentHealth <= 0)
         {
-            lifeCounter.UpdateLives();
+            //lifeCounter.UpdateLives();
             Debug.Log("Player's lives went down by 1");
             StartCoroutine(Die());
             isDead = true;
@@ -71,16 +71,16 @@ public class PlayerHealth : MonoBehaviour
         // Uses the player's movement script reduce their speed and jump so they can't move.
         gameObject.GetComponent<PlayerMovement>().StopMovement();
         yield return new WaitForSeconds(1);
-        if (lifeCounter.currentLives > 0)
-        {
-            currentHealth = maxHealth;
-            UpdateHealthBar();
-        }
-        else 
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
-            PlayerPrefs.DeleteKey("CurrentLives");
-        }
+        //if (lifeCounter.currentLives > 0)
+        //{
+        //    currentHealth = maxHealth;
+        //    UpdateHealthBar();
+        //}
+        //else 
+        //{
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+        //    PlayerPrefs.DeleteKey("CurrentLives");
+        //}
 
         // Change the number here to the duration of the death animation so the whole thing plays out.
         yield return new WaitForSeconds(3);
