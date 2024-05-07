@@ -12,16 +12,11 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] public int currentHealth;
     [SerializeField] private Rigidbody2D rb;
 
-    //[SerializeField] private Image healthBarForeground; 
-
-    // using heart sprites instead
-    public Sprite emptyHeart;
-    public Sprite fullHeart;
-    public Image[] hearts;
 
     public bool isDead;
 
     public PlayerMovement playerMovement;
+    public HealthUI healthUI;
     public UIManager uiManager;
 
     // respawn?
@@ -31,18 +26,19 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         GameData.health = maxHealth;
+        healthUI.SetMaxHearts(maxHealth);
         isDead = false;
     }
 
     private void Update()
     {
-        UpdateHealthBar();
+        
     }
 
     public void GetHurt(int damage)
     {
         currentHealth -= damage;
-        UpdateHealthBar();
+        healthUI.UpdateHearts(currentHealth);
         GameData.health = currentHealth;
         Debug.Log("Player took damage.");
         if (currentHealth <= 0)
@@ -78,30 +74,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth += healAmount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         GameData.health = currentHealth;
-    }
-
-    void UpdateHealthBar()
-    {
-        /*if (healthBarForeground != null)
-        {
-            float fillAmount = Mathf.Clamp(currentHealth / (float)maxHealth, 0, 1);
-            healthBarForeground.fillAmount = fillAmount;
-        }
-        else
-        {
-            Debug.LogError("Health bar foreground image is not assigned!");
-        }*/
-        for (int i = 0; i < hearts.Length; i++)
-        {
-            if (i < maxHealth)
-            {
-                hearts[i].enabled = true;
-            }
-            else
-            {
-                hearts[i].enabled = false;
-            }
-        }
+        healthUI.UpdateHearts(currentHealth);
     }
 
     public void CollectHealthCollectable(int healAmount)
