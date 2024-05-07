@@ -10,9 +10,9 @@ public class KeyScript : MonoBehaviour
 
     private bool isPickedUp;
 
-    private void Update()
+    private void Awake()
     {
-
+        gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -20,9 +20,8 @@ public class KeyScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && !isPickedUp)
         {
             isPickedUp = true;
-            //door.UnlockDoor();
             door.GetComponent<DoorScript>().UnlockDoor();
-            AudioManager.instance.PlaySoundFXClip(keySoundClip, transform, 0.5f);
+            //AudioManager.instance.PlaySoundFXClip(keySoundClip, transform, 0.5f);
             Destroy(gameObject);
         }
     }
