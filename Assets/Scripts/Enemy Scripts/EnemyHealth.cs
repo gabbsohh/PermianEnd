@@ -9,7 +9,7 @@ public class EnemyHealth : MonoBehaviour
     public EnemyPatrol enemyPatrol;
 
     [SerializeField] public bool isArmored;
-    [SerializeField] private ParticleSystem deathParticle;
+    [SerializeField] private GameObject deathParticle;
 
     Animator animator;
 
@@ -40,7 +40,6 @@ public class EnemyHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             StartCoroutine(Die());
-            deathParticle.Play();
         }
     }
 
@@ -54,6 +53,7 @@ public class EnemyHealth : MonoBehaviour
         yield return new WaitForSeconds(1);
         // Enemy gets destroyed once health is depleted.
         gameObject.SetActive(false);
+        Instantiate(deathParticle, gameObject.transform.position, gameObject.transform.rotation);
     }
 
     public void BreakArmor()
