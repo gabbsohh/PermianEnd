@@ -21,6 +21,8 @@ public class EnemyHealth : MonoBehaviour
     {
         gameObject.GetComponent<Collider2D>().enabled = true;
         currentHealth = maxHealth;
+
+        animator = GetComponent<Animator>();
     }
 
     public void TakeDamage(int damage)
