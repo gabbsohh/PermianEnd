@@ -207,6 +207,22 @@ PrefabInstance:
       value: UpdatedMovingPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 4525226785465134419, guid: db223ba17cfe4394982e37b2c3b1943b, type: 3}
+      propertyPath: m_Size.x
+      value: 16.657078
+      objectReference: {fileID: 0}
+    - target: {fileID: 4525226785465134419, guid: db223ba17cfe4394982e37b2c3b1943b, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5839882
+      objectReference: {fileID: 0}
+    - target: {fileID: 4525226785465134419, guid: db223ba17cfe4394982e37b2c3b1943b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.037820816
+      objectReference: {fileID: 0}
+    - target: {fileID: 4525226785465134419, guid: db223ba17cfe4394982e37b2c3b1943b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.2080059
+      objectReference: {fileID: 0}
+    - target: {fileID: 4525226785465134419, guid: db223ba17cfe4394982e37b2c3b1943b, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}

@@ -975,7 +975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6206381836698891185, guid: 8e867567f36907547bcbb67003fa0006, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 6206381836698891185, guid: 8e867567f36907547bcbb67003fa0006, type: 3}
       propertyPath: m_LocalScale.y
@@ -1982,6 +1982,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UpdatedMovingPlatform (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6206381836698891185, guid: 8e867567f36907547bcbb67003fa0006, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.31
+      objectReference: {fileID: 0}
     - target: {fileID: 6343231981852742312, guid: 8e867567f36907547bcbb67003fa0006, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.45628357
@@ -2398,6 +2402,26 @@ PrefabInstance:
     - target: {fileID: 5826383846200412490, guid: 8e867567f36907547bcbb67003fa0006, type: 3}
       propertyPath: m_Name
       value: UpdatedMovingPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927120361381608308, guid: 8e867567f36907547bcbb67003fa0006, type: 3}
+      propertyPath: m_Size.x
+      value: 16.605848
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927120361381608308, guid: 8e867567f36907547bcbb67003fa0006, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3087482
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927120361381608308, guid: 8e867567f36907547bcbb67003fa0006, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0000009536743
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927120361381608308, guid: 8e867567f36907547bcbb67003fa0006, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.6034632
+      objectReference: {fileID: 0}
+    - target: {fileID: 6206381836698891185, guid: 8e867567f36907547bcbb67003fa0006, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 6343231981852742312, guid: 8e867567f36907547bcbb67003fa0006, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2961,7 +2985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6206381836698891185, guid: 8e867567f36907547bcbb67003fa0006, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 6206381836698891185, guid: 8e867567f36907547bcbb67003fa0006, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5301,6 +5325,14 @@ PrefabInstance:
       propertyPath: pointB
       value: 
       objectReference: {fileID: 1282068227}
+    - target: {fileID: 2806622826849096011, guid: e1e2b281a137d794580255f9a20bc0ee, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2806622826849096011, guid: e1e2b281a137d794580255f9a20bc0ee, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3450577043953094302, guid: e1e2b281a137d794580255f9a20bc0ee, type: 3}
       propertyPath: m_Name
       value: SlugWorth_Enemy (1)
