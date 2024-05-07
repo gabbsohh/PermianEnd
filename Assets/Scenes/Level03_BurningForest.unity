@@ -1025,6 +1025,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 1930869632802957072, guid: c2d7c729560b2d94e956983dd32c7955, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1619838017}
+    - target: {fileID: 1930869632802957072, guid: c2d7c729560b2d94e956983dd32c7955, type: 3}
+      propertyPath: doorUnlockText
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4355813485022856591, guid: c2d7c729560b2d94e956983dd32c7955, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.13
@@ -2890,7 +2898,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1476122410}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 6.5
+    OrthographicSize: 7.5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -3863,6 +3871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundFXObject: {fileID: 97940810}
+  bgMusic: {fileID: 8300000, guid: e23214075d6b57e499ff299fdc40ad78, type: 3}
 --- !u!4 &1369856921
 Transform:
   m_ObjectHideFlags: 0
@@ -4658,7 +4667,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.5
+  orthographic size: 7.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
