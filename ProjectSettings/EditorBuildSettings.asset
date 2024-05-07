@@ -18,6 +18,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Level03_EndOfWorld.unity
     guid: 7ef20cd0aba37524f8000557fb0d07c0
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/JacksEndScene.unity
     guid: ec69a1a7dfff4e44f9745a7117491081
+=======
+    path: Assets/Scenes/FakeLevel2.unity
+    guid: a5ab74456cbb4ea4aa2eb2397e103660
+  - enabled: 1
+    path: Assets/Scenes/EnemyTestingScene.unity
+    guid: 6edf9a94ac98176478339c6745878166
+>>>>>>> 74528b09a5cd7c5de6ec393c5ef8dafb9f12eaa9
   m_configObjects: {}
