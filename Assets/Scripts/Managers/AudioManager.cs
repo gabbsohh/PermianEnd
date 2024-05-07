@@ -11,7 +11,7 @@ public class AudioManager : MonoBehaviour
     
     private void Start()
     {
-        AudioManager.instance.PlaySoundFXClip(bgMusic, transform, 0.5f);   
+        AudioManager.instance.PlaySoundFXClip(bgMusic, transform, 0.3f);   
     }
 
     private void Awake()

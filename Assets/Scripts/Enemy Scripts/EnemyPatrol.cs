@@ -20,6 +20,7 @@ public class EnemyPatrol : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentPoint = pointB.transform;
         GetComponent<BoxCollider2D>().isTrigger = false;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -52,10 +53,12 @@ public class EnemyPatrol : MonoBehaviour
         if(speed == 0)
         {
             isStunned = true;
+            anim.SetBool("isStunned",true);
         }
         else
         {
             isStunned = false;
+            anim.SetBool("isStunned",false);
         }
     }
 

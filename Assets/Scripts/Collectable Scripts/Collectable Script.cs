@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class CollectableScript : MonoBehaviour
 {
+    [SerializeField] private AudioClip[] collectableSoundClips;
     public int value;
-
-    private bool collected = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        //DontDestroyOnLoad(gameObject);
+        
     }
 
     // Update is called once per frame
@@ -22,16 +21,11 @@ public class CollectableScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collected)
-        {
-            return;
-        }
-
         if (other.gameObject.CompareTag("Player"))
         { 
-            collected = true;
+            Destroy(gameObject);
             CollectableCounter.instance.IncreaseCollectables(value);
-            gameObject.SetActive(false);
+            AudioManager.instance.PlayRandomSoundFXClip(collectableSoundClips, transform, 0.5f);
         }
     }
 }

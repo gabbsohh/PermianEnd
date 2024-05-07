@@ -177,8 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d924f97c00bb8948ac25f5664a8236f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  jump: 6
+  speed: 6
+  jump: 8
   jumpSoundClip: {fileID: 8300000, guid: 5e73265062ea1d046981c903fcf923a5, type: 3}
   rb: {fileID: 3942280347713127312}
   bc: {fileID: 8111234801214823922}
@@ -456,7 +456,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.1764706}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
