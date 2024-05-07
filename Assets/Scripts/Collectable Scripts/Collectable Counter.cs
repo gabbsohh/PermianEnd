@@ -26,6 +26,7 @@ public class CollectableCounter : MonoBehaviour
         if (currentCollectable == 10 && key != null)
         {
             key.gameObject.SetActive(true);
+            Debug.Log("Key is showing");
         }
     }
 

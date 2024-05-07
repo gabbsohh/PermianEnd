@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     //rb.velocity = new Vector2(rb.velocity.x, jump);
                     rb.velocity = Vector2.up * jump;
-                    AudioManager.instance.PlaySoundFXClip(jumpSoundClip, transform, 0.5f);
+                    //AudioManager.instance.PlaySoundFXClip(jumpSoundClip, transform, 0.5f);
                     Debug.Log("Jumping!");
                     //doubleJump = !doubleJump;
                 }
@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
                     if(canDoubleJump)
                     {
                         rb.velocity = Vector2.up * jump;
-                        AudioManager.instance.PlaySoundFXClip(jumpSoundClip, transform, 0.5f);
+                        //AudioManager.instance.PlaySoundFXClip(jumpSoundClip, transform, 0.5f);
                         Debug.Log("Double Jumping!");
                         canDoubleJump = false;
                     }

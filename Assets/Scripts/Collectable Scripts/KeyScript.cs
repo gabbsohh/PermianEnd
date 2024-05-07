@@ -6,7 +6,7 @@ public class KeyScript : MonoBehaviour
 {
     [SerializeField] private GameObject door;
     [SerializeField] GameObject player;
-    [SerializeField] private AudioClip keySoundClip;
+    //[SerializeField] private AudioClip keySoundClip;
 
     private bool isPickedUp;
 
