@@ -12,6 +12,8 @@ public class EnemyHealth : MonoBehaviour
 
     [SerializeField] public bool isArmored;
 
+    Animator animator;
+
     int currentHealth;
 
     // Start is called before the first frame update
