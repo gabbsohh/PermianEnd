@@ -11,9 +11,6 @@ public class EnemyHealth : MonoBehaviour
     public EnemyPatrol enemyPatrol;
 
     [SerializeField] public bool isArmored;
-    [SerializeField] private ParticleSystem deathParticle;
-
-    Animator animator;
 
     int currentHealth;
 
@@ -22,8 +19,6 @@ public class EnemyHealth : MonoBehaviour
     {
         gameObject.GetComponent<Collider2D>().enabled = true;
         currentHealth = maxHealth;
-
-        animator = GetComponent<Animator>();
     }
 
     public void TakeDamage(int damage)
@@ -33,18 +28,16 @@ public class EnemyHealth : MonoBehaviour
             if(isArmored == false)
             {
                 currentHealth -= damage;
-                
+                //AudioManager.instance.PlaySoundFXClip(damageSoundClip, transform, 0.5f);
                 AudioManager.instance.PlayRandomSoundFXClip(damageSoundClips, transform, 0.5f);
             }
         }
 
         // Hurt Animation for Enemy goes here.
-        animator.SetTrigger("hurt");
 
         if(currentHealth <= 0)
         {
             StartCoroutine(Die());
-            deathParticle.Play();
         }
         else
         {

@@ -92,7 +92,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounce: 6
   rb2d: {fileID: 3940738778660222709}
-  jumpStunSoundClip: {fileID: 0}
 --- !u!1 &7455758369803814726
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,9 +385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   jump: 6
-  jumpSoundClip: {fileID: 0}
   rb: {fileID: 3940738778660222709}
-  bc: {fileID: 0}
   groundCheck: {fileID: 4417867710998221654}
   groundLayer:
     serializedVersion: 2
@@ -435,13 +432,10 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 3
   rb: {fileID: 3940738778660222709}
-  hurtSoundClip: {fileID: 0}
-  healthBarForeground: {fileID: 0}
-  respawnPoint: {x: 0, y: 0, z: 0}
+  emptyHeart: {fileID: 21300000, guid: 3c823ce47d9e3b34fa5c580f03f4eef0, type: 3}
+  fullHeart: {fileID: 21300000, guid: f0c7d6e26549d8b45ad120203ed31a87, type: 3}
+  hearts: []
   isDead: 0
   playerMovement: {fileID: 5177814544951922037}
-  healthUI: {fileID: 0}
   uiManager: {fileID: 0}
-  iFramesDuration: 0
-  numFlashes: 0
-  StompChecker: {fileID: 0}
+  respawnPosition: {fileID: 0}

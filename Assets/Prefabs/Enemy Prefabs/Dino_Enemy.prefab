@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 2392322970437380375}
   - component: {fileID: -6286246098522691698}
   - component: {fileID: 7161647060160494705}
-  - component: {fileID: 5385103885984862137}
   m_Layer: 6
   m_Name: Dino_Enemy
   m_TagString: Enemy
@@ -182,7 +181,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: af7f249e6047b2e4eb02cebb9b42174a, type: 3}
   enemyPatrol: {fileID: -6286246098522691698}
   isArmored: 0
-  deathParticle: {fileID: 8123850040375886193, guid: 58743c14fca08604e86e0a83e73f9adf, type: 3}
 --- !u!114 &2392322970437380375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c36f213fec74b2240b2892a1f09ec688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 2257282040787274624, guid: dd1dd06f88394454c825e84df1516152, type: 3}
+  playerHealth: {fileID: 5158142944001912246, guid: 0a0a9e00199c87d408b21805e1889446, type: 3}
   damage: 1
 --- !u!114 &-6286246098522691698
 MonoBehaviour:
@@ -235,17 +233,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5385103885984862137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3786245174455951051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f3be8292f4e7441b0551f0aac27ad5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 5880871843178508371, guid: 5325829c6a58fa64f93c1d3eedaac038, type: 3}
-  bulletPos: {fileID: 0}

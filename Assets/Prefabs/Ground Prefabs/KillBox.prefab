@@ -99,8 +99,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Respawn: 1
-  playerHealth: {fileID: 2257282040787274624, guid: dd1dd06f88394454c825e84df1516152, type: 3}
-  hurtSoundClip: {fileID: 8300000, guid: ad2ca9038b2f1af4db8e0db5efe96f95, type: 3}
 --- !u!61 &6320438666868993616
 BoxCollider2D:
   m_ObjectHideFlags: 0
