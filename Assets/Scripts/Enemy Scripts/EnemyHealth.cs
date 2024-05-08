@@ -5,12 +5,13 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] public int maxHealth;
-    //[SerializeField] private AudioClip damageSoundClip;
-    [SerializeField] private AudioClip[] damageSoundClips;
 
     public EnemyPatrol enemyPatrol;
 
     [SerializeField] public bool isArmored;
+    [SerializeField] private GameObject deathParticle;
+
+    Animator animator;
 
     int currentHealth;
 
@@ -19,6 +20,8 @@ public class EnemyHealth : MonoBehaviour
     {
         gameObject.GetComponent<Collider2D>().enabled = true;
         currentHealth = maxHealth;
+
+        animator = GetComponent<Animator>();
     }
 
     public void TakeDamage(int damage)
@@ -28,23 +31,15 @@ public class EnemyHealth : MonoBehaviour
             if(isArmored == false)
             {
                 currentHealth -= damage;
-                //AudioManager.instance.PlaySoundFXClip(damageSoundClip, transform, 0.5f);
-                AudioManager.instance.PlayRandomSoundFXClip(damageSoundClips, transform, 0.5f);
             }
         }
 
         // Hurt Animation for Enemy goes here.
+        animator.SetTrigger("hurt");
 
         if(currentHealth <= 0)
         {
             StartCoroutine(Die());
-        }
-        else
-        {
-            if(enemyPatrol.isStunned == false)
-            {
-                enemyPatrol.GetStunned(0.5f);
-            }
         }
     }
 
@@ -58,6 +53,7 @@ public class EnemyHealth : MonoBehaviour
         yield return new WaitForSeconds(1);
         // Enemy gets destroyed once health is depleted.
         gameObject.SetActive(false);
+        Instantiate(deathParticle, gameObject.transform.position, gameObject.transform.rotation);
     }
 
     public void BreakArmor()
