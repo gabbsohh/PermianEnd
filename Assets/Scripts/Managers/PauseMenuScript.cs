@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenuScript : MonoBehaviour
 {
     public static bool paused = false;
-    public GameObject pauseMenuCanvas;
+    public GameObject pauseMenu;
+    public GameObject settingsMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -32,20 +33,38 @@ public class PauseMenuScript : MonoBehaviour
 
     void Stop()
     {
-        pauseMenuCanvas.SetActive(true);
+        pauseMenu.SetActive(true);
             Time.timeScale = 0.0f;
+            Debug.Log("Game Paused!");
         paused = true;
     }
 
     public void Play()
     {
-        pauseMenuCanvas.SetActive(false);
+        pauseMenu.SetActive(false);
             Time.timeScale = 1.0f;
+            Debug.Log("Game Resumed!");
         paused = false;
     }
 
     public void MainMenuButton()
-    {
+    {   
+        Time.timeScale = 1.0f;
+        Debug.Log("Loading Title Screen!");
         SceneManager.LoadScene("Title");
+    }
+
+    public void SettingsButton()
+    {
+        Debug.Log("Going To Settings Menu!");
+        pauseMenu.SetActive(false);
+        settingsMenu.SetActive(true);
+    }
+
+    public void BackButton()
+    {
+        Debug.Log("Leaving Settings Menu!");
+        pauseMenu.SetActive(true);
+        settingsMenu.SetActive(false);
     }
 }
