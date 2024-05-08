@@ -14,13 +14,12 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private AudioClip hurtSoundClip;
 
-    [SerializeField] private Image healthBarForeground; 
-
     [SerializeField] public Vector3 respawnPoint;
 
     public bool isDead;
 
     public PlayerMovement playerMovement;
+    public HealthUI healthUI;
     public UIManager uiManager;
     //public LifeCounterScript lifeCounter;
 
@@ -32,7 +31,9 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        maxHealth = currentHealth;
+        currentHealth = maxHealth;
+        GameData.health = maxHealth;
+        healthUI.SetMaxHearts(maxHealth);
         isDead = false;
         spriteRend = GetComponent<SpriteRenderer>();
         StompChecker = transform.GetChild(2).gameObject;
@@ -40,13 +41,14 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
-        UpdateHealthBar();
+        
     }
 
     public void GetHurt(int damage)
     {
         currentHealth -= damage;
-        //healthBarForeground.fillAmount = currentHealth / (float) maxHealth;
+        healthUI.UpdateHearts(currentHealth);
+        GameData.health = currentHealth;
         Debug.Log("Player took damage.");
         AudioManager.instance.PlaySoundFXClip(hurtSoundClip, transform, 0.5f);
         if (currentHealth <= 0)
@@ -96,13 +98,8 @@ public class PlayerHealth : MonoBehaviour
     { 
         currentHealth += healAmount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-
-        //healthBarForeground.fillAmount = currentHealth / (float) maxHealth;
-    }
-
-    void UpdateHealthBar()
-    {
-        healthBarForeground.fillAmount = Mathf.Clamp(currentHealth / (float)maxHealth, 0, 1);
+        GameData.health = currentHealth;
+        healthUI.UpdateHearts(currentHealth);
     }
 
     public void CollectHealthCollectable(int healAmount)
