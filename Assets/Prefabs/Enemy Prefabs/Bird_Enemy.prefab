@@ -181,6 +181,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: af7f249e6047b2e4eb02cebb9b42174a, type: 3}
   enemyPatrol: {fileID: 8076920460751271724}
   isArmored: 0
+  deathParticle: {fileID: 4014223591908352047, guid: 58743c14fca08604e86e0a83e73f9adf, type: 3}
 --- !u!114 &-484033832024121169
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -180,6 +180,7 @@ MonoBehaviour:
   damageSoundClips: []
   enemyPatrol: {fileID: 2749074889035033017}
   isArmored: 1
+  deathParticle: {fileID: 4014223591908352047, guid: 58743c14fca08604e86e0a83e73f9adf, type: 3}
 --- !u!114 &6531172126807980920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c36f213fec74b2240b2892a1f09ec688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 2257282040787274624, guid: dd1dd06f88394454c825e84df1516152, type: 3}
+  playerHealth: {fileID: 3496214655755202996, guid: 148954485393d9748a82cd0e1c8368b3, type: 3}
   damage: 1
 --- !u!114 &2749074889035033017
 MonoBehaviour:
