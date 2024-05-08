@@ -11,7 +11,6 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] int maxHealth;
     [SerializeField] public int currentHealth;
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private ParticleSystem deathParticle;
 
     [SerializeField] private AudioClip hurtSoundClip;
     [SerializeField] public Vector3 respawnPoint;
@@ -63,7 +62,6 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Player has died.");
         // death anim
-        deathParticle.Play();
 
         // All movement stops, all collision is removed and the player is destroyed afterwards.
         // Uses the player's movement script reduce their speed and jump so they can't move.
