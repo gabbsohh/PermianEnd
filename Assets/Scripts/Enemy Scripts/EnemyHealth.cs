@@ -32,13 +32,12 @@ public class EnemyHealth : MonoBehaviour
             if(isArmored == false)
             {
                 currentHealth -= damage;
-                //AudioManager.instance.PlaySoundFXClip(damageSoundClip, transform, 0.5f);
                 AudioManager.instance.PlayRandomSoundFXClip(damageSoundClips, transform, 0.5f);
             }
         }
 
         // Hurt Animation for Enemy goes here.
-        animator.SetBool("isHurt", true);
+        animator.SetBool("isStunned", true);
 
         if(currentHealth <= 0)
         {
