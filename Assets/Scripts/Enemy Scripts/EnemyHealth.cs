@@ -12,8 +12,6 @@ public class EnemyHealth : MonoBehaviour
 
     [SerializeField] public bool isArmored;
 
-    Animator animator;
-
     int currentHealth;
 
     // Start is called before the first frame update
@@ -21,8 +19,6 @@ public class EnemyHealth : MonoBehaviour
     {
         gameObject.GetComponent<Collider2D>().enabled = true;
         currentHealth = maxHealth;
-
-        animator = GetComponent<Animator>();
     }
 
     public void TakeDamage(int damage)
@@ -38,7 +34,6 @@ public class EnemyHealth : MonoBehaviour
         }
 
         // Hurt Animation for Enemy goes here.
-        animator.SetBool("isHurt", true);
 
         if(currentHealth <= 0)
         {
