@@ -3216,9 +3216,17 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2257282040787274624, guid: dd1dd06f88394454c825e84df1516152, type: 3}
+      propertyPath: maxHealth
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2257282040787274624, guid: dd1dd06f88394454c825e84df1516152, type: 3}
       propertyPath: StompChecker
       value: 
       objectReference: {fileID: 1088928674}
+    - target: {fileID: 2257282040787274624, guid: dd1dd06f88394454c825e84df1516152, type: 3}
+      propertyPath: currentHealth
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2257282040787274624, guid: dd1dd06f88394454c825e84df1516152, type: 3}
       propertyPath: healthBarForeground
       value: 
@@ -4534,7 +4542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6387223af8755a4bb457e9698a18120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectableText: {fileID: 0}
+  collectableText: {fileID: 391284581}
   currentCollectable: 0
   key: {fileID: 0}
 --- !u!114 &1496728066
@@ -23598,6 +23606,7 @@ SceneRoots:
   - {fileID: 1496728069}
   - {fileID: 1066137283}
   - {fileID: 88161575}
+  - {fileID: 1088928673}
   - {fileID: 266403498}
   - {fileID: 298326121}
   - {fileID: 255245342}
@@ -23614,6 +23623,5 @@ SceneRoots:
   - {fileID: 1318249718}
   - {fileID: 6027897}
   - {fileID: 945044647}
-  - {fileID: 1088928673}
   - {fileID: 1835604308}
   - {fileID: 1803102929}
