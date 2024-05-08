@@ -14,8 +14,6 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private AudioClip hurtSoundClip;
 
-    [SerializeField] private Image healthBarForeground; 
-
     [SerializeField] public Vector3 respawnPoint;
 
     public bool isDead;

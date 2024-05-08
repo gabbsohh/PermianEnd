@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c36f213fec74b2240b2892a1f09ec688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 3496214655755202996, guid: 148954485393d9748a82cd0e1c8368b3, type: 3}
+  playerHealth: {fileID: 2257282040787274624, guid: dd1dd06f88394454c825e84df1516152, type: 3}
   damage: 2
 --- !u!114 &6034570040760884980
 MonoBehaviour:
@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  damageSoundClips: []
   enemyPatrol: {fileID: 1803108132169500406}
   isArmored: 0
 --- !u!114 &1803108132169500406

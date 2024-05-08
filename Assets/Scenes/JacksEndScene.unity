@@ -4682,7 +4682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6387223af8755a4bb457e9698a18120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectableText: {fileID: 0}
+  collectableText: {fileID: 376391958}
   currentCollectable: 0
   key: {fileID: 0}
 --- !u!114 &1496728066

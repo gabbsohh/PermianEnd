@@ -32,7 +32,7 @@ public class EnemyHealth : MonoBehaviour
             if(isArmored == false)
             {
                 currentHealth -= damage;
-                //AudioManager.instance.PlaySoundFXClip(damageSoundClip, transform, 0.5f);
+                
                 AudioManager.instance.PlayRandomSoundFXClip(damageSoundClips, transform, 0.5f);
             }
         }
