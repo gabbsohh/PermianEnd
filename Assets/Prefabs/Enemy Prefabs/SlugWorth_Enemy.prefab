@@ -178,7 +178,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   enemyPatrol: {fileID: 2749074889035033017}
-  isArmored: 0
+  isArmored: 1
+  deathParticle: {fileID: 4014223591908352047, guid: 58743c14fca08604e86e0a83e73f9adf, type: 3}
 --- !u!114 &6531172126807980920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 3496214655755202996, guid: 148954485393d9748a82cd0e1c8368b3, type: 3}
-  damage: 0
+  damage: 1
 --- !u!114 &2749074889035033017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,7 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 0}
   pointB: {fileID: 0}
-  speed: 0
+  speed: 2
   tempSpeed: 0
   isStunned: 0
 --- !u!114 &2058268748767510996

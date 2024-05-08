@@ -14791,6 +14791,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 94825449727149380}
+    - target: {fileID: 1075115321361422740, guid: 407465e1b99ae5243bf1e49b0eaeac90, type: 3}
+      propertyPath: hurtSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ad2ca9038b2f1af4db8e0db5efe96f95, type: 3}
     - target: {fileID: 4976726825694309186, guid: 407465e1b99ae5243bf1e49b0eaeac90, type: 3}
       propertyPath: m_LocalScale.x
       value: 200
@@ -14997,6 +15001,14 @@ PrefabInstance:
       propertyPath: hearts.Array.data[2]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5177814544951922037, guid: 148954485393d9748a82cd0e1c8368b3, type: 3}
+      propertyPath: jumpSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e73265062ea1d046981c903fcf923a5, type: 3}
+    - target: {fileID: 7343011391660685185, guid: 148954485393d9748a82cd0e1c8368b3, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 94825449727149378}
     - target: {fileID: 7343011391660685185, guid: 148954485393d9748a82cd0e1c8368b3, type: 3}
       propertyPath: attackRate
       value: 0.55

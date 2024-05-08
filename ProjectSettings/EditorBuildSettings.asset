@@ -8,21 +8,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleIveDoneLiterallyNothingWith.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/ForestLevelTest.unity
+    guid: c7b02e6487b5af747ad57f6687a86100
+  - enabled: 1
+    path: Assets/Scenes/CaveLevelTest.unity
+    guid: a5ab74456cbb4ea4aa2eb2397e103660
   - enabled: 0
     path: Assets/Scenes/JacksForestScene.unity
-    guid: 8aa0c8372f448c54ab0f58b1747887cd
+    guid: db9b821769ade1e41a9d78fcc11e0221
   - enabled: 0
     path: Assets/Scenes/Level02_Cave.unity
     guid: 5acfcf51c9d87dd4788d11259b19fbda
   - enabled: 0
     path: Assets/Scenes/Level03_EndOfWorld.unity
     guid: 7ef20cd0aba37524f8000557fb0d07c0
-  - enabled: 1
-    path: Assets/Scenes/CaveLevelTest.unity
-    guid: a5ab74456cbb4ea4aa2eb2397e103660
   - enabled: 0
     path: Assets/Scenes/EnemyTestingScene.unity
     guid: 6edf9a94ac98176478339c6745878166
-    path: Assets/Scenes/JacksEndScene.unity
-    guid: ec69a1a7dfff4e44f9745a7117491081
   m_configObjects: {}
