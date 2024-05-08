@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CollectableCounter : MonoBehaviour
 {
     public static CollectableCounter instance;
+    SceneManager sceneManager;
 
     public TMP_Text collectableText;
+    public TMP_Text questionText;
     public int currentCollectable = 0;
 
     public GameObject key;
@@ -21,7 +24,7 @@ public class CollectableCounter : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-        collectableText.text = " " + GameData.collectables.ToString() + "/10";
+        counterText();
 
         if (currentCollectable == 10 && key != null)
         {
@@ -34,10 +37,20 @@ public class CollectableCounter : MonoBehaviour
     {
         currentCollectable += v;
         
-        collectableText.text = " " + currentCollectable.ToString() + "/10";
+        //collectableText.text = " " + currentCollectable.ToString() + "/10";
 
         GameData.collectables += v;
 
+    }
+
+    public void counterText()
+    {
+        if (SceneManager.GetActiveScene().buildIndex != 3)
+        {
+            questionText.text = ""; 
+            collectableText.text = " " + GameData.collectables.ToString() + "/10";
+        }
+        else questionText.text = " " + currentCollectable.ToString() + " /?";
     }
 
 }
