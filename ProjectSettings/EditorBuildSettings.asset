@@ -6,18 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/JacksEndScene.unity
-    guid: ec69a1a7dfff4e44f9745a7117491081
+    path: Assets/Scenes/TitleIveDoneLiterallyNothingWith.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/JacksForestScene.unity
-    guid: 128d0a3126e9d714c98a9f024ae4487f
-  - enabled: 1
-    path: Assets/Scenes/EnemyTestingScene.unity
-    guid: 6edf9a94ac98176478339c6745878166
+    path: Assets/Scenes/ForestLevelTest.unity
+    guid: c7b02e6487b5af747ad57f6687a86100
   - enabled: 1
     path: Assets/Scenes/FakeLevel2.unity
     guid: a5ab74456cbb4ea4aa2eb2397e103660
   - enabled: 1
-    path: Assets/Scenes/FakeLevel3.unity
+    path: Assets/Scenes/JacksEndScene.unity
+    guid: ec69a1a7dfff4e44f9745a7117491081
+  - enabled: 0
+    path: Assets/Scenes/EnemyTestingScene.unity
+    guid: 6edf9a94ac98176478339c6745878166
+  - enabled: 0
+    path: Assets/Scenes/Unused Scenes/FakeLevel3.unity
     guid: e9b49a0c937e8114bbac1d1cbce9bb4d
+  - enabled: 0
+    path: Assets/Scenes/Unused Scenes/JacksForestScene.unity
+    guid: 128d0a3126e9d714c98a9f024ae4487f
   m_configObjects: {}

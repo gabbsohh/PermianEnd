@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 7631099592081328871}
   - component: {fileID: 2220245765202307002}
   - component: {fileID: 4727405143383767246}
+  - component: {fileID: 5113070970267110858}
   m_Layer: 3
   m_Name: FallingPlatform
   m_TagString: Untagged
@@ -301,3 +302,24 @@ MonoBehaviour:
   rb: {fileID: 2220245765202307002}
   fallDelay: 2
   respawnTime: 2
+--- !u!95 &5113070970267110858
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8641744945811330856}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f12f87f22b5cf4d41a66fa3c6875b12c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
