@@ -17,17 +17,13 @@ public class KeyScript : MonoBehaviour
     {
         doorUnlockText.text = " ";
     }
-    
-    private void Awake()
-    {
-        gameObject.SetActive(false);
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player") && !isPickedUp)
         {
             isPickedUp = true;
+            //door.UnlockDoor();
             door.GetComponent<DoorScript>().UnlockDoor();
             AudioManager.instance.PlaySoundFXClip(keySoundClip, transform, 0.5f);       
             doorUnlockText.text = "Door Unlocked!";

@@ -133,4 +133,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f58959c597d01404092540b53cad4109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCombat: {fileID: 3114653257233612218, guid: dd1dd06f88394454c825e84df1516152, type: 3}
+  playerCombat: {fileID: 7343011391660685185, guid: 148954485393d9748a82cd0e1c8368b3, type: 3}
