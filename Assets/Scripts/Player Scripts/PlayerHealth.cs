@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] int maxHealth;
     [SerializeField] public int currentHealth;
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private ParticleSystem deathParticle;
 
 
     public bool isDead;
@@ -52,6 +53,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Player has died.");
         // death anim
+        deathParticle.Play();
 
         transform.position = respawnPosition.position;
 

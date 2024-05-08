@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 1509118972, guid: 27ed25ee44037e64b9d328b9d8fe032e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -195,6 +195,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: af7f249e6047b2e4eb02cebb9b42174a, type: 3}
   enemyPatrol: {fileID: 346288636549076993}
   isArmored: 0
+  deathParticle: {fileID: 0}
 --- !u!114 &346288636549076993
 MonoBehaviour:
   m_ObjectHideFlags: 0

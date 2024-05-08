@@ -12875,6 +12875,37 @@ Transform:
   - {fileID: 1736026034}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1553865590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1553865591}
+  m_Layer: 0
+  m_Name: Respawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1553865591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553865590}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1554797020
 GameObject:
   m_ObjectHideFlags: 0
@@ -14380,6 +14411,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 94825449727149380}
+    - target: {fileID: 1075115321361422740, guid: 407465e1b99ae5243bf1e49b0eaeac90, type: 3}
+      propertyPath: hurtSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ad2ca9038b2f1af4db8e0db5efe96f95, type: 3}
     - target: {fileID: 4976726825694309186, guid: 407465e1b99ae5243bf1e49b0eaeac90, type: 3}
       propertyPath: m_LocalScale.x
       value: 200
@@ -14502,6 +14537,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinalizedPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 2257282040787274624, guid: dd1dd06f88394454c825e84df1516152, type: 3}
+      propertyPath: healthUI
+      value: 
+      objectReference: {fileID: 1835074604}
+    - target: {fileID: 2257282040787274624, guid: dd1dd06f88394454c825e84df1516152, type: 3}
+      propertyPath: maxHealth
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2257282040787274624, guid: dd1dd06f88394454c825e84df1516152, type: 3}
+      propertyPath: currentHealth
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2257282040787274624, guid: dd1dd06f88394454c825e84df1516152, type: 3}
+      propertyPath: deathParticle
+      value: 
+      objectReference: {fileID: 8123850040375886193, guid: 58743c14fca08604e86e0a83e73f9adf, type: 3}
+    - target: {fileID: 2257282040787274624, guid: dd1dd06f88394454c825e84df1516152, type: 3}
+      propertyPath: respawnPosition
+      value: 
+      objectReference: {fileID: 1553865591}
     - target: {fileID: 7879794648432496366, guid: dd1dd06f88394454c825e84df1516152, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.4305553
@@ -14737,3 +14792,4 @@ SceneRoots:
   - {fileID: 1258805673}
   - {fileID: 688028765}
   - {fileID: 822187407}
+  - {fileID: 1553865591}

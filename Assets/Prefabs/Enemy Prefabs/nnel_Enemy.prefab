@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -1378046777, guid: 7e901fbef662c994991b0a792abd61d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 6.0000005, y: 6.00586}
@@ -192,6 +192,7 @@ MonoBehaviour:
   damageSoundClips: []
   enemyPatrol: {fileID: 6215241257732261310}
   isArmored: 0
+  deathParticle: {fileID: 0}
 --- !u!114 &6215241257732261310
 MonoBehaviour:
   m_ObjectHideFlags: 0
