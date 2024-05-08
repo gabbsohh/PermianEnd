@@ -179,7 +179,7 @@ MonoBehaviour:
   maxHealth: 3
   enemyPatrol: {fileID: 2749074889035033017}
   isArmored: 1
-  deathParticle: {fileID: 4014223591908352047, guid: 58743c14fca08604e86e0a83e73f9adf, type: 3}
+  deathParticle: {fileID: 8123850040375886193, guid: 58743c14fca08604e86e0a83e73f9adf, type: 3}
 --- !u!114 &6531172126807980920
 MonoBehaviour:
   m_ObjectHideFlags: 0
