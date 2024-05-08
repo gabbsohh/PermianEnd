@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class KeyScript : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class KeyScript : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+    public TextMeshProUGUI doorUnlockText;
+
+    private void Start()
+    {
+        doorUnlockText.text = " ";
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,9 +28,9 @@ public class KeyScript : MonoBehaviour
         {
             isPickedUp = true;
             door.GetComponent<DoorScript>().UnlockDoor();
-            //AudioManager.instance.PlaySoundFXClip(keySoundClip, transform, 0.5f);
+            AudioManager.instance.PlaySoundFXClip(keySoundClip, transform, 0.5f);       
+            doorUnlockText.text = "Door Unlocked!";
             Destroy(gameObject);
         }
     }
-
 }
