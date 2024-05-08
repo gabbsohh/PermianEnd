@@ -144,6 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 0}
-  player: {fileID: 8835167956795860996, guid: 148954485393d9748a82cd0e1c8368b3, type: 3}
+  player: {fileID: 154578667510119510, guid: dd1dd06f88394454c825e84df1516152, type: 3}
   keySoundClip: {fileID: 8300000, guid: 4024a5eee4994ac4caf84188b8651eda, type: 3}
   doorUnlockText: {fileID: 0}

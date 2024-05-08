@@ -21,9 +21,9 @@ public class CollectableCounter : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-        collectableText.text = " " + GameData.collectables.ToString();
+        collectableText.text = " " + GameData.collectables.ToString() + "/10";
 
-        if (currentCollectable == 1 && key != null)
+        if (currentCollectable == 10 && key != null)
         {
             key.gameObject.SetActive(true);
         }
