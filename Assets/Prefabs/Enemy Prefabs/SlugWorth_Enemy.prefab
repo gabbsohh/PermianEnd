@@ -15,8 +15,6 @@ GameObject:
   - component: {fileID: 8572925454416018522}
   - component: {fileID: 6531172126807980920}
   - component: {fileID: 2749074889035033017}
-  - component: {fileID: 2058268748767510996}
-  - component: {fileID: 382499173732623625}
   - component: {fileID: 5393059053754401698}
   m_Layer: 6
   m_Name: SlugWorth_Enemy
@@ -83,7 +81,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -675060580, guid: 0799bdc0d5964a4479b0125e92df8023, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 6, y: 6}
@@ -177,8 +175,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  damageSoundClips:
+  - {fileID: 8300000, guid: 7b73d89fcb9d1bc4b9a7e51bf553d0e4, type: 3}
+  - {fileID: 8300000, guid: e22c08b31eade9948aad6188079f177f, type: 3}
+  - {fileID: 8300000, guid: af7f249e6047b2e4eb02cebb9b42174a, type: 3}
   enemyPatrol: {fileID: 2749074889035033017}
-  isArmored: 0
+  isArmored: 1
+  deathParticle: {fileID: 0}
 --- !u!114 &6531172126807980920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 3496214655755202996, guid: 148954485393d9748a82cd0e1c8368b3, type: 3}
-  damage: 0
+  damage: 1
 --- !u!114 &2749074889035033017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,36 +210,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 0}
   pointB: {fileID: 0}
-  speed: 0
+  speed: 2
   tempSpeed: 0
   isStunned: 0
---- !u!114 &2058268748767510996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3450577043953094302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b07b64e4c8fd59d47a3818df29a91c3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 1
---- !u!114 &382499173732623625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3450577043953094302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f3be8292f4e7441b0551f0aac27ad5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 5880871843178508371, guid: 5325829c6a58fa64f93c1d3eedaac038, type: 3}
-  bulletPos: {fileID: 0}
 --- !u!95 &5393059053754401698
 Animator:
   serializedVersion: 5
@@ -247,7 +223,7 @@ Animator:
   m_GameObject: {fileID: 3450577043953094302}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8b741687142ea5f49b7f19879c6fa0c3, type: 2}
+  m_Controller: {fileID: 9100000, guid: b53d93228a8b7ca44b5187380e77cbed, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

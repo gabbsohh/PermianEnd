@@ -61,7 +61,7 @@ public class PlayerCombat : MonoBehaviour
         if(currentWeapon == "Pickaxe")
         {
             attackDamage = 2;
-            attackRate = 1.0f;
+            attackRate = 0.5f;
             usingPick = true;
             // Use animation set for pickaxe.
             animator.SetInteger("weaponCounter", 1);
