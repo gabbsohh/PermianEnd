@@ -51,7 +51,7 @@ public class PauseMenuScript : MonoBehaviour
     {   
         Time.timeScale = 1.0f;
         Debug.Log("Loading Title Screen!");
-        SceneManager.LoadScene("Title");
+        SceneManager.LoadScene("TitleIveDoneLiterallyNothingWith");
     }
 
     public void SettingsButton()
